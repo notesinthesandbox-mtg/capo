@@ -1,1831 +1,820 @@
 <!DOCTYPE html>
-<html lang="en"><head><script data-bard-client-injected="true">(function(firebaseConfig, initialAuthToken, appId) {
-        window.__firebase_config = firebaseConfig;
-        window.__initial_auth_token = initialAuthToken;
-        window.__app_id = appId;
-            })("\n{\n  \"apiKey\": \"AIzaSyCqyCcs2R2e7AegGjvFAwG98wlamtbHvZY\",\n  \"authDomain\": \"bard-frontend.firebaseapp.com\",\n  \"projectId\": \"bard-frontend\",\n  \"storageBucket\": \"bard-frontend.firebasestorage.app\",\n  \"messagingSenderId\": \"175205271074\",\n  \"appId\": \"1:175205271074:web:2b7bd4d34d33bf38e6ec7b\"\n}\n","eyJhbGciOiJSUzI1NiIsImtpZCI6IjExNjRiNzdiNDMzZDdhMDAyMWI4NjE4YjhjYTU3ZTMyZGI5MWUxMTMiLCJ0eXAiOiJKV1QifQ.eyJzdWIiOiJmaXJlYmFzZS1hZG1pbnNkay1mYnN2Y0BiYXJkLWZyb250ZW5kLmlhbS5nc2VydmljZWFjY291bnQuY29tIiwiYXVkIjoiaHR0cHM6Ly9pZGVudGl0eXRvb2xraXQuZ29vZ2xlYXBpcy5jb20vZ29vZ2xlLmlkZW50aXR5LmlkZW50aXR5dG9vbGtpdC52MS5JZGVudGl0eVRvb2xraXQiLCJ1aWQiOiIwMjEwNzI3NjMxMTUyOTY0NDg1MCIsImlzcyI6ImZpcmViYXNlLWFkbWluc2RrLWZic3ZjQGJhcmQtZnJvbnRlbmQuaWFtLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJjbGFpbXMiOnsiYXBwSWQiOiJjXzMwZWNmYmJmYjEzNWY5M2VfaW5kZXguaHRtbC0yOTgifSwiZXhwIjoxNzkzMjE2NTc2LCJpYXQiOjE3OTMyMTI5NzYsImFsZyI6IlJTMjU2In0.e3-qMahY2f1oZCXj5qPUCf-1w6sYbzdKnCsEuPb4NiclHVBLrKHDJ4BnvtZgAsg5HyMpu2kGQYdYuUgmDs2Z03AMlcepNRgSc1lofhDxVXMn8LQhwXxzGzvCcXB7G4R7pL8z_XuO3GHRl-jnAlOYRKs8Mnk_8H46mHCo2dwytTZSX26CV9vgqbM_G9aNQNINO-queN3RkU2Lhh1lgQp4Mbr8u6zOviHPWhKlITnbmHK5Clwvzx0Es3c2r00XSXmvcfOROWhaBSHYFYf1M5WyzcRutlYyvTkpwI-dLZuiAqDQPHqR6e1G8rBHvLp1FlgwxfmDactUJRuoTpRFVtm4kA","c_30ecfbbfb135f93e_index.html-298")</script><script data-bard-client-injected="true">
-  document.addEventListener('input', (event) => {
-    if (event.target && (event.target.isContentEditable || event.target.hasAttribute('contenteditable'))) {
-      const clonedDoc = document.cloneNode(true);
-      const injectedScripts = clonedDoc.querySelectorAll('[data-bard-client-injected="true"]');
-      injectedScripts.forEach(el => el.remove());
-      window.parent.postMessage({
-        type: 'inlineEdit',
-        html: '<!DOCTYPE html>\n' + clonedDoc.documentElement.outerHTML
-      }, '*');
-    }
-  });
-</script><script data-bard-client-injected="true">(function(){'use strict';window.addEventListener("message",a=>{a.data&&a.data.type==="SUPPLEMENTAL_DATA_UPDATE"&&window.dispatchEvent(new CustomEvent("supplementaldataupdate",{detail:a.data.data}))});}).call(this);
-</script><script data-bard-client-injected="true">(function(){'use strict';var k=typeof Object.defineProperties=="function"?Object.defineProperty:function(a,b,d){if(a==Array.prototype||a==Object.prototype)return a;a[b]=d.value;return a};function m(a){a=["object"==typeof globalThis&&globalThis,a,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var b=0;b<a.length;++b){var d=a[b];if(d&&d.Math==Math)return d}throw Error("Cannot find global object");}var q=m(this);
-function r(a,b){if(b)a:{var d=q;a=a.split(".");for(var c=0;c<a.length-1;c++){var e=a[c];if(!(e in d))break a;d=d[e]}a=a[a.length-1];c=d[a];b=b(c);b!=c&&b!=null&&k(d,a,{configurable:!0,writable:!0,value:b})}}function t(a){function b(c){return a.next(c)}function d(c){return a.throw(c)}return new Promise(function(c,e){function f(g){g.done?c(g.value):Promise.resolve(g.value).then(b,d).then(f,e)}f(a.next())})}function u(a){return t(a())}
-r("Object.values",function(a){return a?a:function(b){var d=[],c;for(c in b)Object.prototype.hasOwnProperty.call(b,c)&&d.push(b[c]);return d}});r("Array.prototype.includes",function(a){return a?a:function(b,d){var c=this;c instanceof String&&(c=String(c));var e=c.length;d=d||0;for(d<0&&(d=Math.max(d+e,0));d<e;d++){var f=c[d];if(f===b||Object.is(f,b))return!0}return!1}});/*
-
- MIT License
-
- Copyright (c) 2017-2023 W.Y.
-
- Permission is hereby granted, free of charge, to any person obtaining a copy
- of this software and associated documentation files (the "Software"), to deal
- in the Software without restriction, including without limitation the rights
- to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- copies of the Software, and to permit persons to whom the Software is
- furnished to do so, subject to the following conditions:
-
- The above copyright notice and this permission notice shall be included in
- all copies or substantial portions of the Software.
-
- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
- SOFTWARE.
-
-*/
-function v(a,b){var d=a.style;b.backgroundColor&&(d.backgroundColor=b.backgroundColor);b.width&&(d.width=`${b.width}px`);b.height&&(d.height=`${b.height}px`);var c=b.style;c!=null&&Object.keys(c).forEach(e=>{d[e]=c[e]})};var aa=(()=>{var a=0;return()=>{a+=1;return`u${`0000${(Math.random()*1679616<<0).toString(36)}`.slice(-4)}${a}`}})();function w(a){var b=[];for(let d=0,c=a.length;d<c;d++)b.push(a[d]);return b}let y=null;function z(a={}){return y?y:a.u?y=a.u:y=w(window.getComputedStyle(document.documentElement))}function A(a,b){return(a=(a.ownerDocument.defaultView||window).getComputedStyle(a).getPropertyValue(b))?parseFloat(a.replace("px","")):0}
-function B(a,b={}){var d;if(!(d=b.width)){d=A(a,"border-left-width");var c=A(a,"border-right-width");d=a.clientWidth+d+c}(b=b.height)||(b=A(a,"border-top-width"),c=A(a,"border-bottom-width"),b=a.clientHeight+b+c);return{width:d,height:b}}function C(a){return new Promise((b,d)=>{var c=new Image;c.onload=()=>{c.decode().then(()=>{requestAnimationFrame(()=>b(c))})};c.onerror=d;c.crossOrigin="anonymous";c.decoding="async";c.src=a})}
-function ba(a){return u(function*(){return Promise.resolve().then(()=>(new XMLSerializer).serializeToString(a)).then(encodeURIComponent).then(b=>`data:image/svg+xml;charset=utf-8,${b}`)})}
-function ca(a,b,d){return u(function*(){var c=document.createElementNS("http://www.w3.org/2000/svg","svg"),e=document.createElementNS("http://www.w3.org/2000/svg","foreignObject");c.setAttribute("width",`${b}`);c.setAttribute("height",`${d}`);c.setAttribute("viewBox",`0 0 ${b} ${d}`);e.setAttribute("width","100%");e.setAttribute("height","100%");e.setAttribute("x","0");e.setAttribute("y","0");e.setAttribute("externalResourcesRequired","true");c.appendChild(e);e.appendChild(a);return ba(c)})}
-var D=(a,b)=>{if(a instanceof b)return!0;a=Object.getPrototypeOf(a);return a===null?!1:a.constructor.name===b.name||D(a,b)};function da(a,b){return z(b).map(d=>{var c=a.getPropertyValue(d),e=a.getPropertyPriority(d);return`${d}: ${c}${e?" !important":""};`}).join(" ")}
-function E(a,b,d,c){a=window.getComputedStyle(a,d);var e=a.getPropertyValue("content");if(e!==""&&e!=="none"){var f=aa();try{b.className=`${b.className} ${f}`}catch(h){return}e=document.createElement("style");var g=e.appendChild;d=`.${f}:${d}`;a.cssText?(c=a.getPropertyValue("content"),c=`${a.cssText} content: '${c.replace(/'|"/g,"")}';`):c=da(a,c);g.call(e,document.createTextNode(`${d}{${c}}`));b.appendChild(e)}};function F(a){return a.search(/^(data:)/)!==-1}function G(a,b,d){return u(function*(){var c=yield fetch(a,b);if(c.status===404)throw Error(`Resource "${c.url}" not found`);var e=yield c.blob();return new Promise((f,g)=>{var h=new FileReader;h.onerror=g;h.onloadend=()=>{try{f(d({v:c,result:h.result}))}catch(l){g(l)}};h.readAsDataURL(e)})})}const H={};function ea(a,b,d){var c=a.replace(/\?.*/,"");d&&(c=a);/ttf|otf|eot|woff2?/i.test(c)&&(c=c.replace(/.*\//,""));return b?`[${b}]${c}`:c}
-function I(a,b,d){return u(function*(){var c=ea(a,b,d.F);if(H[c]!=null)return H[c];d.B&&(a+=(/\?/.test(a)?"&":"?")+(new Date).getTime());try{let f=yield G(a,d.l,({v:g,result:h})=>{b||(b=g.headers.get("Content-Type")||"");return h.split(/,/)[1]});var e=`data:${b};base64,${f}`}catch(f){e=d.o||""}return H[c]=e})};const J={R:"application/font-woff",S:"application/font-woff",O:"application/font-truetype",C:"application/vnd.ms-fontobject",J:"image/png",H:"image/jpeg",G:"image/jpeg",D:"image/gif",N:"image/tiff",M:"image/svg+xml",P:"image/webp"};function K(a){return(a=/\.([^./]*?)$/g.exec(a))?a[1]:""};function fa(a){return u(function*(){var b=a.toDataURL();return b==="data:,"?a.cloneNode(!1):C(b)})}function ha(a,b){return u(function*(){if(a.currentSrc){var d=document.createElement("canvas");let c=d.getContext("2d");d.width=a.clientWidth;d.height=a.clientHeight;c==null||c.drawImage(a,0,0,d.width,d.height);d=d.toDataURL();return C(d)}d=a.poster;d=yield I(d,J[K(d).toLowerCase()]||"",b);return C(d)})}
-function ia(a,b){return u(function*(){try{let d;if(a==null?0:(d=a.contentDocument)==null?0:d.body)return yield L(a.contentDocument.body,b,!0)}catch(d){}return a.cloneNode(!1)})}function ja(a,b){return u(function*(){return D(a,HTMLCanvasElement)?fa(a):D(a,HTMLVideoElement)?ha(a,b):D(a,HTMLIFrameElement)?ia(a,b):a.cloneNode(a.tagName!=null&&a.tagName.toUpperCase()==="SVG")})}
-function ka(a,b,d){return u(function*(){if(b.tagName!=null&&b.tagName.toUpperCase()==="SVG")return b;var c=[];if(a.tagName!=null&&a.tagName.toUpperCase()==="SLOT"&&a.assignedNodes)c=w(a.assignedNodes());else{let e;if(D(a,HTMLIFrameElement)&&((e=a.contentDocument)==null?0:e.body))c=w(a.contentDocument.body.childNodes);else{let f;c=w(((f=a.shadowRoot)!=null?f:a).childNodes)}}if(c.length===0||D(a,HTMLVideoElement))return b;yield c.reduce((e,f)=>e.then(()=>L(f,d)).then(g=>{g&&b.appendChild(g)}),Promise.resolve());
-return b})}function la(a,b,d){var c=b.style;if(c){var e=window.getComputedStyle(a);e.cssText?(c.cssText=e.cssText,c.transformOrigin=e.transformOrigin):z(d).forEach(f=>{var g=e.getPropertyValue(f);f==="font-size"&&g.endsWith("px")&&(g=`${Math.floor(parseFloat(g.substring(0,g.length-2)))-.1}px`);D(a,HTMLIFrameElement)&&f==="display"&&g==="inline"&&(g="block");f==="d"&&b.getAttribute("d")&&(g=`path(${b.getAttribute("d")})`);c.setProperty(f,g,e.getPropertyPriority(f))})}}
-function ma(a,b){D(a,HTMLSelectElement)&&(b=Array.from(b.children).find(d=>a.value===d.getAttribute("value")))&&b.setAttribute("selected","")}
-function na(a,b){return u(function*(){var d=a.querySelectorAll?a.querySelectorAll("use"):[];if(d.length===0)return a;var c={};for(var e=0;e<d.length;e++){var f=d[e].getAttribute("xlink:href");if(f){let g=document.querySelector(f);a.querySelector(f)||!g||c[f]||(c[f]=yield L(g,b,!0))}}d=Object.values(c);if(d.length){c=document.createElementNS("http://www.w3.org/1999/xhtml","svg");c.setAttribute("xmlns","http://www.w3.org/1999/xhtml");c.style.position="absolute";c.style.width="0";c.style.height="0";
-c.style.overflow="hidden";c.style.display="none";e=document.createElementNS("http://www.w3.org/1999/xhtml","defs");c.appendChild(e);for(f=0;f<d.length;f++)e.appendChild(d[f]);a.appendChild(c)}return a})}
-function L(a,b,d){return u(function*(){return d||!b.filter||b.filter(a)?Promise.resolve(a).then(c=>ja(c,b)).then(c=>ka(a,c,b)).then(c=>{D(c,Element)&&(la(a,c,b),E(a,c,":before",b),E(a,c,":after",b),D(a,HTMLTextAreaElement)&&(c.textContent=a.value),D(a,HTMLInputElement)&&c.setAttribute("value",a.value),ma(a,c));return c}).then(c=>na(c,b)):null})};const M=/url\((['"]?)([^'"]+?)\1\)/g,oa=/url\([^)]+\)\s*format\((["']?)([^"']+)\1\)/g,pa=/src:\s*(?:url\([^)]+\)\s*format\([^)]+\)[,;]\s*)+/g;function qa(a){var b=[];a.replace(M,(d,c,e)=>{b.push(e);return d});return b.filter(d=>!F(d))}
-function ra(a,b,d,c){return u(function*(){try{let e=d?(new URL(b,d||void 0)).toString():b,f;f=yield I(e,J[K(b).toLowerCase()]||"",c);return a.replace(new RegExp(`(url\\(['"]?)(${b.replace(/([.*+?^${}()|\[\]\/\\])/g,"\\$1")})(['"]?\\))`,"g"),`$1${f}$3`)}catch(e){}return a})}function sa(a,{K:b}){return b?a.replace(pa,d=>{for(;;){let [c,,e]=oa.exec(d)||[];if(!e)return"";if(e===b)return`src: ${c};`}}):a}
-function N(a,b,d){return u(function*(){if(a.search(M)===-1)return a;var c=sa(a,d);return qa(c).reduce((e,f)=>e.then(g=>ra(g,f,b,d)),Promise.resolve(c))})};function O(a,b,d){return u(function*(){var c,e=(c=b.style)==null?void 0:c.getPropertyValue(a);return e?(c=yield N(e,null,d),b.style.setProperty(a,c,b.style.getPropertyPriority(a)),!0):!1})}function ta(a,b){return u(function*(){(yield O("background",a,b))||(yield O("background-image",a,b));(yield O("mask",a,b))||(yield O("-webkit-mask",a,b))||(yield O("mask-image",a,b))||(yield O("-webkit-mask-image",a,b))})}
-function ua(a,b){return u(function*(){var d=D(a,HTMLImageElement);if(d&&!F(a.src)||D(a,SVGImageElement)&&!F(a.href.baseVal)){var c=d?a.src:a.href.baseVal,e=yield I(c,J[K(c).toLowerCase()]||"",b);yield new Promise((f,g)=>{a.onload=f;a.onerror=b.h?(...h)=>{try{f(b.h(...h))}catch(l){g(l)}}:g;a.decode&&(a.decode=f);a.loading==="lazy"&&(a.loading="eager");d?(a.srcset="",a.src=e):a.href.baseVal=e})}})}
-function va(a,b){return u(function*(){var d=w(a.childNodes).map(c=>P(c,b));yield Promise.all(d).then(()=>a)})}function P(a,b){return u(function*(){D(a,Element)&&(yield ta(a,b),yield ua(a,b),yield va(a,b))})};const Q={};function R(a){return u(function*(){var b=Q[a];if(b!=null)return b;b=yield(yield fetch(a)).text();b={url:a,cssText:b};return Q[a]=b})}function S(a,b){return u(function*(){var d=a.cssText,c=/url\(["']?([^"')]+)["']?\)/g,e=(d.match(/url\([^)]+\)/g)||[]).map(f=>u(function*(){var g=f.replace(c,"$1");g.startsWith("https://")||(g=(new URL(g,a.url)).href);return G(g,b.l,({result:h})=>{d=d.replace(f,`url(${h})`);return[f,h]})}));return Promise.all(e).then(()=>d)})}
-function T(a){if(a==null)return[];var b=[];a=a.replace(/(\/\*[\s\S]*?\*\/)/gi,"");for(var d=RegExp("((@.*?keyframes [\\s\\S]*?){([\\s\\S]*?}\\s*?)})","gi");;){var c=d.exec(a);if(c===null)break;b.push(c[0])}a=a.replace(d,"");d=/@import[\s\S]*?url\([^)]*\)[\s\S]*?;/gi;for(c=RegExp("((\\s*?(?:\\/\\*[\\s\\S]*?\\*\\/)?\\s*?@media[\\s\\S]*?){([\\s\\S]*?)}\\s*?})|(([\\s\\S]*?){([\\s\\S]*?)})","gi");;){let e=d.exec(a);if(e===null)if(e=c.exec(a),e===null)break;else d.lastIndex=c.lastIndex;else c.lastIndex=
-d.lastIndex;b.push(e[0])}return b}
-function wa(a,b){return u(function*(){var d=[],c=[];a.forEach(e=>{if("cssRules"in e)try{w(e.cssRules||[]).forEach((f,g)=>{if(f.type===CSSRule.IMPORT_RULE){let h=g+1;f=R(f.href).then(l=>S(l,b)).then(l=>T(l).forEach(p=>{try{e.insertRule(p,p.startsWith("@import")?h+=1:e.cssRules.length)}catch(x){}})).catch(()=>{});c.push(f)}})}catch(f){let g=a.find(h=>h.href==null)||document.styleSheets[0];e.href!=null&&c.push(R(e.href).then(h=>S(h,b)).then(h=>T(h).forEach(l=>{g.insertRule(l,g.cssRules.length)})).catch(()=>
-{}))}});return Promise.all(c).then(()=>{a.forEach(e=>{if("cssRules"in e)try{w(e.cssRules||[]).forEach(f=>{d.push(f)})}catch(f){}});return d})})}function xa(a){return a.filter(b=>b.type===CSSRule.FONT_FACE_RULE).filter(b=>b.style.getPropertyValue("src").search(M)!==-1)}function ya(a,b){return u(function*(){if(a.ownerDocument==null)throw Error("Provided element is not within a Document");var d=yield wa(w(a.ownerDocument.styleSheets),b);return xa(d)})}
-function za(a){function b(c){(c.style.fontFamily||getComputedStyle(c).fontFamily).split(",").forEach(e=>{d.add(e.trim().replace(/["']/g,""))});Array.from(c.children).forEach(e=>{e instanceof HTMLElement&&b(e)})}var d=new Set;b(a);return d}function Aa(a,b){return u(function*(){var d=yield ya(a,b),c=za(a);return(yield Promise.all(d.filter(e=>c.has(e.style.fontFamily.trim().replace(/["']/g,""))).map(e=>N(e.cssText,e.parentStyleSheet?e.parentStyleSheet.href:null,b)))).join("\n")})}
-function Ba(a,b){return u(function*(){var d=b.m!=null?b.m:b.A?null:yield Aa(a,b);if(d){let c=document.createElement("style");c.appendChild(document.createTextNode(d));a.firstChild?a.insertBefore(c,a.firstChild):a.appendChild(c)}})};function Ca(a,b={}){return u(function*(){var {width:d,height:c}=B(a,b),e=yield L(a,b,!0);yield Ba(e,b);yield P(e,b);v(e,b);return yield ca(e,d,c)})}
-function Da(a,b={}){return u(function*(){var {width:d,height:c}=B(a,b),e=yield Ca(a,b);e=yield C(e);var f=document.createElement("canvas"),g=f.getContext("2d"),h=b.I||window.devicePixelRatio||1,l=b.j||d,p=b.i||c;f.width=l*h;f.height=p*h;!b.L&&(f.width>16384||f.height>16384)&&(f.width>16384&&f.height>16384?f.width>f.height?(f.height*=16384/f.width,f.width=16384):(f.width*=16384/f.height,f.height=16384):f.width>16384?(f.height*=16384/f.width,f.width=16384):(f.width*=16384/f.height,f.height=16384));
-f.style.width=`${l}`;f.style.height=`${p}`;b.backgroundColor&&(g.fillStyle=b.backgroundColor,g.fillRect(0,0,f.width,f.height));g.drawImage(e,0,0,f.width,f.height);return f})}function Ea(a,b={}){return u(function*(){return(yield Da(a,b)).toDataURL()})};const Fa=["gemini.google.com","corp.google.com","proxy.googlers.com"];function V(a){a=Number(a.replace(/px$/,""));return Number.isFinite(a)?a:0}function W(){return document.body.querySelectorAll('[class*="animate"]').length>0}function X(a,b){var d=document.createElement("canvas");d.width=a;d.height=b;return d.toDataURL("image/png")}const Y=X(1,1);
-function Z(a,b){return u(function*(){var d=Math.max(b?b.width:a.offsetWidth,1),c=Math.max(b?b.height:a.offsetHeight,1),e=HTMLCanvasElement.prototype.toDataURL;b&&(HTMLCanvasElement.prototype.toDataURL=function(f,g){var h;if(h=this.isConnected&&a.contains(this)){{let n=this.getBoundingClientRect();if(n.width===0||n.height===0)h=!1;else if(window.getComputedStyle(this).position==="fixed")h=n.bottom>0&&n.top<b.height&&n.right>0&&n.left<b.width;else{h=a.getBoundingClientRect();var l=n.top-h.top,p=n.left-
-h.left,x=n.right-h.left;h=n.bottom-h.top>b.scrollTop&&l<b.scrollTop+b.height&&x>b.scrollLeft&&p<b.scrollLeft+b.width}}h=!h}return h?"data:,":e.call(this,f,g)});try{let f=window.getComputedStyle(a),g=b?`${V(f.marginTop)-b.scrollTop}px`:void 0,h=b?`${V(f.marginLeft)-b.scrollLeft}px`:void 0,l=`${Math.max(a.offsetWidth,d)}px`,p,x=`${Math.max(a.offsetHeight,c+((p=b==null?void 0:b.scrollTop)!=null?p:0))}px`;return yield Ea(a,Object.assign({},{width:d,height:c,j:d,i:c},b?{style:{width:l,height:x,marginTop:g,
-marginLeft:h,marginBlockStart:g,marginInlineStart:h}}:{},{A:!0,filter:n=>{if(n.tagName==="IMG"){let U=n.getAttribute("src");if(!U||U.trim()===""||n.style.display==="none")return!1}return!0},o:Y,h:()=>Y}))}catch(f){return X(d,c)}finally{HTMLCanvasElement.prototype.toDataURL=e}})}
-function Ga(){return u(function*(){var a=document.body.offsetWidth,b=document.body.offsetHeight,d=document.body.cloneNode(!0);d.querySelectorAll('[class*="animate"]').forEach(c=>{c.classList.remove(...Array.from(c.classList).filter(e=>e.startsWith("animate")))});d.style.width=`${a}px`;d.style.height=`${b}px`;return d})}
-function Ha(a){return u(function*(){var b={width:window.innerWidth||document.documentElement.clientWidth||document.body.offsetWidth,height:window.innerHeight||document.documentElement.clientHeight||document.body.offsetHeight,scrollTop:window.scrollY||document.documentElement.scrollTop||document.body.scrollTop||0,scrollLeft:window.scrollX||document.documentElement.scrollLeft||document.body.scrollLeft||0},d=document.body;if(W()){let c=yield Ga();d=c;document.body.appendChild(c)}b=yield Z(d,b);W()&&
-document.body.removeChild(d);window.parent.postMessage({type:"SEND_SCREENSHOT",image:b,topOffset:0},a.origin)})}function Ia(a){return u(function*(){var b={type:"SEND_SCREENSHOT_FOR_DATA_VISUALIZATION",image:yield Z(document.body),topOffset:0};window.parent.postMessage(b,a.origin)})}window.addEventListener("message",a=>u(function*(){if(Fa.some(d=>a.origin.includes(d))){var b=a.data;b&&(b.type==="MAKE_SCREENSHOT"&&(yield Ha(a)),b.type==="MAKE_SCREENSHOT_FOR_DATA_VISUALIZATION"&&(yield Ia(a)))}}));
-})();</script><script data-bard-client-injected="true">(function() {
-  // Ensure this script is executed only once
-  if (window.firebaseAuthBridgeScriptLoaded) {
-    return;
-  }
-  window.firebaseAuthBridgeScriptLoaded = true;
-
-  let nextTokenPromiseId = 0;
-
-  // Stores { resolve, reject } for ongoing token requests
-  const pendingTokenPromises = {};
-
-  // Listen for messages from the Host Application
-  window.addEventListener('message', function(event) {
-
-    const messageData = event.data;
-
-  if (messageData && messageData.type === 'RESOLVE_NEW_FIREBASE_TOKEN') {
-      const { success, token, error, promiseId } = messageData ?? {};
-      if (pendingTokenPromises[promiseId]) {
-        if (success) {
-          pendingTokenPromises[promiseId].resolve(token);
-        } else {
-          pendingTokenPromises[promiseId].reject(new Error(error || 'Token refresh failed from host.'));
-        }
-        delete pendingTokenPromises[promiseId];
-      }
-    }
-  });
-
-  // Expose a function for the Generated App to request a new Firebase token
-  window.requestNewFirebaseToken = function() {
-    const currentPromiseId = nextTokenPromiseId++;
-    const promise = new Promise((resolve, reject) => {
-      pendingTokenPromises[currentPromiseId] = { resolve, reject };
-    });
-    if (window.parent && window.parent !== window) {
-      window.parent.postMessage({
-        type: 'REQUEST_NEW_FIREBASE_TOKEN',
-        promiseId: currentPromiseId
-      }, '*');
-    } else {
-      pendingTokenPromises[currentPromiseId].reject(new Error('No parent window to request token from.'));
-      delete pendingTokenPromises[currentPromiseId];
-    }
-    return promise;
-  };
-})();</script><script data-bard-client-injected="true">
-let realOriginalGetUserMedia = null;
-if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-  realOriginalGetUserMedia = navigator.mediaDevices.getUserMedia.bind(navigator.mediaDevices);
-}
-
-(function() {
-  if (navigator.mediaDevices && navigator.mediaDevices.__proto__) {
-    try {
-      Object.defineProperty(navigator.mediaDevices.__proto__, 'getUserMedia', {
-        get: function() {
-          return undefined; // Or throw an error
-        },
-        configurable: false
-      });
-    } catch (error) {
-      console.error("Error defining prototype getter:", error);
-    }
-  }
-})();
-
-(function() {
-  const pendingMediaResolvers = {};
-  let nextMediaPromiseId = 0;
-
-  function requestMediaPermissions(constraints) {
-    const mediaPromiseId = nextMediaPromiseId++;
-    const promise = new Promise((resolve, reject) => {
-      pendingMediaResolvers[mediaPromiseId] = (granted) => {
-        delete pendingMediaResolvers[mediaPromiseId];
-        resolve(granted);
-      };
-    });
-
-    window.parent.postMessage({
-      type: 'requestMediaPermission',
-      constraints: constraints,
-      promiseId: mediaPromiseId,
-    }, '*');
-
-    return promise;
-  }
-
-  let originalGetUserMedia = realOriginalGetUserMedia;
-
-  function interceptGetUserMedia() {
-    if (navigator.mediaDevices) {
-      Object.defineProperty(navigator.mediaDevices, 'getUserMedia', {
-        value: function(constraints) {
-          return requestMediaPermissions(constraints).then((granted) => {
-            if (granted) {
-              if (originalGetUserMedia) {
-                return originalGetUserMedia(constraints);
-              } else {
-                throw new Error("Original getUserMedia not available.");
-              }
-            } else {
-              throw new DOMException('Permission denied', 'NotAllowedError');
-            }
-          });
-        },
-        writable: false,
-        configurable: false
-      });
-    }
-  }
-
-  interceptGetUserMedia();
-
-  const observer = new MutationObserver(function(mutationsList, observer) {
-    for (const mutation of mutationsList) {
-      if (mutation.type === 'reconfigured' && mutation.name === 'getUserMedia' && mutation.object === navigator.mediaDevices) {
-        interceptGetUserMedia();
-      } else if (mutation.type === 'attributes' && mutation.attributeName === 'getUserMedia' && mutation.target === navigator.mediaDevices) {
-        interceptGetUserMedia();
-      } else if (mutation.type === 'childList' && mutation.addedNodes) {
-        mutation.addedNodes.forEach(node => {
-          if (node === navigator.mediaDevices) {
-            interceptGetUserMedia();
-          }
-        });
-      }
-    }
-  });
-
-  function interceptSpeechRecognition() {
-    if (!window.SpeechRecognition && !window.webkitSpeechRecognition) {
-      return;
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fretboard & Capo Analyzer</title>
+  <style>
+    :root {
+      --bg-main: #0f172a;
+      --bg-card: #1e293b;
+      --bg-input: #334155;
+      --accent: #0ea5e9;
+      --accent-hover: #0284c7;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --border: #334155;
+      --fretboard-wood: #2a1a08;
+      --fret-wire: #94a3b8;
+      --string-wire: #cbd5e1;
+      --nut-color: #f1f5f9;
+      --note-default: #38bdf8;
+      --capo-bg: rgba(234, 179, 8, 0.85);
+      --mute-color: #ef4444;
     }
 
-    const OriginalSpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-
-    const SpeechRecognitionWrapper = function(...args) {
-      const recognizer = new OriginalSpeechRecognition(...args);
-      const originalStart = recognizer.start.bind(recognizer);
-
-      recognizer.start = function() {
-        requestMediaPermissions({ audio: true }).then(granted => {
-          if (granted) {
-            originalStart();
-          } else {
-            const errorEvent = new SpeechRecognitionErrorEvent('error');
-            errorEvent.error = 'not-allowed'; // This is the standard error for permission denial.
-            recognizer.dispatchEvent(errorEvent);
-          }
-        });
-      };
-
-      return recognizer;
-    };
-
-    SpeechRecognitionWrapper.prototype = OriginalSpeechRecognition.prototype;
-    SpeechRecognitionWrapper.prototype.constructor = SpeechRecognitionWrapper;
-
-    if (window.SpeechRecognition) {
-      window.SpeechRecognition = SpeechRecognitionWrapper;
-    }
-    if (window.webkitSpeechRecognition) {
-      window.webkitSpeechRecognition = SpeechRecognitionWrapper;
-    }
-  }
-
-  interceptSpeechRecognition();
-
-  window.addEventListener('message', function(event) {
-    if (event.data) {
-      if (event.data.type === 'resolveMediaPermission') {
-        const { promiseId, granted } = event.data;
-        if (pendingMediaResolvers[promiseId]) {
-          pendingMediaResolvers[promiseId](granted);
-        }
-      }
-    }
-  });
-
-})();</script><script ws-interception-config="{&quot;parentOrigin&quot;:&quot;https://gemini.google.com&quot;,&quot;proxiedDomains&quot;:[]}" data-bard-client-injected="true">(function(){'use strict';var u=typeof Object.defineProperties=="function"?Object.defineProperty:function(b,d,e){if(b==Array.prototype||b==Object.prototype)return b;b[d]=e.value;return b};function v(b){b=["object"==typeof globalThis&&globalThis,b,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var d=0;d<b.length;++d){var e=b[d];if(e&&e.Math==Math)return e}throw Error("Cannot find global object");}var w=v(this);
-function y(b,d){if(d)a:{var e=w;b=b.split(".");for(var h=0;h<b.length-1;h++){var k=b[h];if(!(k in e))break a;e=e[k]}b=b[b.length-1];h=e[b];d=d(h);d!=h&&d!=null&&u(e,b,{configurable:!0,writable:!0,value:d})}}function z(b){function d(h){return b.next(h)}function e(h){return b.throw(h)}return new Promise(function(h,k){function m(n){n.done?h(n.value):Promise.resolve(n.value).then(d,e).then(m,k)}m(b.next())})}y("globalThis",function(b){return b||w});/*
-
- Copyright The Closure Library Authors.
- SPDX-License-Identifier: Apache-2.0
-*/
-function A(b,d){function e(){}e.prototype=d.prototype;b.j=d.prototype;b.prototype=new e;b.prototype.constructor=b;b.h=function(h,k,m){for(var n=Array(arguments.length-2),p=2;p<arguments.length;p++)n[p-2]=arguments[p];return d.prototype[k].apply(h,n)}};function B(b,d,e="*"){function h(a){if(typeof a==="string")return F.encode(a).buffer;if(a instanceof ArrayBuffer)return a.slice(0);if(ArrayBuffer.isView(a))return a.buffer.slice(a.byteOffset,a.byteOffset+a.byteLength);throw Error("Invalid data type");}function k(a){a=h(a);var f={type:"send",data:new Uint8Array(a)},g;(g=r)==null||g.postMessage(f,[a])}function m(){if(!r)throw Error("Data port not captured yet.");r.onmessage=a=>{if(a.data.type==="message"){a=new MessageEvent("message",{data:G.decode(a.data.data)});
-let f;(f=c.onmessage)==null||f.call(c,a);c.dispatchEvent(a)}}}function n(){if(!t)throw Error("Control port not captured yet.");t.onmessage=a=>{switch(a.data.type){case "open":l=1;var f=new Event("open"),g;(g=c.onopen)==null||g.call(c,f);c.dispatchEvent(f);q.forEach(H=>{k(H)});q=[];break;case "close":g=a.data;l=3;g=new CloseEvent("close",{code:g.code,reason:g.reason,wasClean:g.wasClean});(f=c.onclose)==null||f.call(c,g);c.dispatchEvent(g);break;case "error":l=3;f=new Event("error");let x;(x=c.onerror)==
-null||x.call(c,f);c.dispatchEvent(f)}}}function p(a){return z(function*(){var f=new MessageChannel;t=f.port1;var g=new MessageChannel;r=g.port1;n();m();window.parent.postMessage({type:"websocket_open",portOrdering:["control","data"],url:b,protocols:a||[],connectionId:I},e,[f.port2,g.port2])}())}var c=Reflect.construct(EventTarget,[],new.target);c.CONNECTING=0;c.OPEN=1;c.CLOSING=2;c.CLOSED=3;c.url=b;c.binaryType="arraybuffer";c.protocol="";c.i="";var l=0,t=null,r=null,q=[],F=new TextEncoder,G=new TextDecoder;
-c.onopen=null;c.onmessage=null;c.onclose=null;c.onerror=null;Object.defineProperty(c,"readyState",{get:()=>l,enumerable:!0,configurable:!0});Object.defineProperty(c,"bufferedAmount",{get:()=>{var a=0;q.forEach(f=>{a+=typeof f==="string"?f.length:f.byteLength});return a},enumerable:!0,configurable:!0});var I=function(){var a;return((a=globalThis.crypto)==null?0:a.randomUUID)?globalThis.crypto.randomUUID():"xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g,f=>{var g=Math.random()*16|0;return(f===
-"x"?g:g&3|8).toString(16)})}();c.send=a=>{if(l===1)a instanceof Blob?a.arrayBuffer().then(f=>{k(f)}):k(a);else if(l===0)if(typeof a==="string")q.push(a);else if(a instanceof ArrayBuffer||ArrayBuffer.isView(a))q.push(h(a));else throw Error("Sending Blob is not supported before the connection is open.");else console.debug("WebSocket send called in CLOSING or CLOSED state; ignored.")};c.close=(a=1E3,f="")=>{if(l!==2&&l!==3){l=2;a={type:"close",code:a,reason:f,wasClean:a===1E3};var g;(g=t)==null||g.postMessage(a)}};
-Promise.resolve().then(()=>p(d));return c}A(B,EventTarget);var C=document.currentScript,D=C==null?void 0:C.getAttribute("ws-interception-config");if(!D)throw Error("WebSocket Interceptor: Missing ws-interception-config attribute in the script tag.");var E=JSON.parse(D);if(!E.parentOrigin||typeof E.parentOrigin!=="string")throw Error("WebSocket Interceptor: Invalid parentOrigin in ws-interception-config");
-(function(b){var d=Object.getOwnPropertyDescriptor(window,"WebSocket");if(!d||d.writable||d.configurable)d=Object.assign(function(e,h){try{let k=(new URL(e)).hostname;if(b.proxiedDomains.some(m=>k===m||k.endsWith(`.${m}`)))return new B(e,h,b.parentOrigin)}catch(k){throw window.parent.postMessage({type:"websocket_blocked",url:e,reason:"blocked_invalid_url"},b.parentOrigin),new DOMException(`WebSocket connection to '${e}' is not allowed in Canvas.`,"SecurityError");}window.parent.postMessage({type:"websocket_blocked",
-url:e,reason:"blocked_domain_not_allowlisted"},b.parentOrigin);throw new DOMException(`WebSocket connection to '${e}' is not allowed in Canvas.`,"SecurityError");},{CONNECTING:0,OPEN:1,CLOSING:2,CLOSED:3}),Object.defineProperty(window,"WebSocket",{value:d,writable:!1,configurable:!1})})({proxiedDomains:E.proxiedDomains||[],parentOrigin:E.parentOrigin});}).call(this);
-</script><script data-bard-client-injected="true">((function(modelInformation) {
-  const originalFetch = window.fetch;
-  // TODO: b/421908508 - Move these out of the script and match all generative AI model calls.
-  let googleLlmBaseApiUrls = [
-    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.textModelName + ':streamGenerateContent',
-    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.textModelName + ':generateContent',
-    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageModelName + ':predict',
-    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageModelName + ':predictLongRunning',
-    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageEditModelName + ':generateContent',
-    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageTransformModelName + ':generateContent',
-    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.videoModelName + ':predict',
-    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.videoModelName + ':predictLongRunning',
-    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.ttsModelName + ':generateContent',
-  ];
-  modelInformation.deprecatedTextModelNames.forEach((modelName) => {
-    googleLlmBaseApiUrls.push(
-      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':streamGenerateContent',
-      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':generateContent',
-    );
-  });
-  modelInformation.deprecatedImageModelNames.forEach((modelName) => {
-    googleLlmBaseApiUrls.push(
-      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':predict',
-      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':predictLongRunning',
-      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':generateContent',
-      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':streamGenerateContent',
-    );
-  });
-  modelInformation.deprecatedGenerateImageModelNames.forEach((modelName) => {
-    googleLlmBaseApiUrls.push(
-      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':generateContent',
-      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':streamGenerateContent',
-    );
-  });
-  modelInformation.deprecatedImageTransformModelNames.forEach((modelName) => {
-    googleLlmBaseApiUrls.push(
-      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':generateContent',
-      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':streamGenerateContent',
-    );
-  });
-
-  const pendingFetchResolvers = {};
-  let nextPromiseId = 0;
-
-  function handleStringInput(input, optionsArgument) {
-    const actualUrl = input;
-    const fetchCallArgs = [actualUrl, optionsArgument];
-    const effectiveOptions = optionsArgument || {};
-    const bodyForApiKeyCheck = effectiveOptions.body;
-    const bodyForPostMessage = effectiveOptions.body;
-    return { actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage };
-  }
-
-  function handleRequestInput(input, optionsArgument) {
-    const actualUrl = input.url;
-    const fetchCallArgs = [input, optionsArgument];
-    const effectiveOptions = { method: input.method, headers: new Headers(input.headers) };
-    let bodyForApiKeyCheck;
-    let bodyForPostMessage;
-
-    if (optionsArgument) {
-      if (optionsArgument.method) effectiveOptions.method = optionsArgument.method;
-      if (optionsArgument.headers) effectiveOptions.headers = new Headers(optionsArgument.headers);
-      if ('body' in optionsArgument) {
-        bodyForApiKeyCheck = optionsArgument.body;
-        bodyForPostMessage = optionsArgument.body;
-      } else {
-        bodyForApiKeyCheck = undefined;
-        bodyForPostMessage = input.body;
-      }
-    } else {
-      bodyForApiKeyCheck = undefined;
-      bodyForPostMessage = input.body;
-    }
-    return { actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage };
-  }
-
-  window.fetch = function(input, optionsArgument) {
-    let actualUrl;
-    let fetchCallArgs;
-    let effectiveOptions = {};
-    let bodyForApiKeyCheck;
-    let bodyForPostMessage;
-
-    if (typeof input === 'string') {
-      ({actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage} = handleStringInput(input, optionsArgument));
-    } else if (input instanceof Request) {
-      ({actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage} = handleRequestInput(input, optionsArgument));
-    } else {
-      return originalFetch.apply(window, [input, optionsArgument]);
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     }
 
-    effectiveOptions.method = effectiveOptions.method || 'GET';
-    if (!effectiveOptions.headers) {
-      effectiveOptions.headers = new Headers();
+    body {
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      padding: 1.5rem;
     }
 
-
-    if (typeof actualUrl === 'string' && googleLlmBaseApiUrls.some((url) => actualUrl.startsWith(url))) {
-      let apiKeyIsNull = true;
-
-      const regex = new RegExp("models/([^:]+)");
-      const modelNameMatch = actualUrl.match(regex);
-      const modelName = modelNameMatch ? modelNameMatch[1] : 'unspecified';
-
-
-      try {
-        const urlObject = new URL(actualUrl);  // Use URL object for robust parsing
-        const apiKeyParam = urlObject.searchParams.get('key');
-        if (apiKeyParam) {
-          apiKeyIsNull = false;
-        }
-      } catch (e) {
-        // Continue checks even if URL parsing fails
-      }
-
-      if (apiKeyIsNull && effectiveOptions.headers) {
-        const h = new Headers(effectiveOptions.headers);
-        const apiKeyHeaderValue = h.get('X-API-Key') || h.get('x-api-key');
-        if (apiKeyHeaderValue) {
-          apiKeyIsNull = false;
-          return originalFetch.apply(window, fetchCallArgs);
-        }
-      }
-
-      if (apiKeyIsNull && effectiveOptions.method && ['POST', 'PUT', 'PATCH'].includes(effectiveOptions.method.toUpperCase()) && typeof bodyForApiKeyCheck === 'string') {
-        try {
-          const bodyData = JSON.parse(bodyForApiKeyCheck);
-          if (bodyData && bodyData.apiKey) {
-            apiKeyIsNull = false;
-            return originalFetch.apply(window, fetchCallArgs);
-          }
-        } catch (e) {
-          // Ignore JSON parsing errors
-        }
-      }
-
-      if(apiKeyIsNull) {
-        const promiseId = nextPromiseId++;
-        const promise = new Promise((resolve) => {
-          pendingFetchResolvers[promiseId] = (resolvedResponse) => {
-            delete pendingFetchResolvers[promiseId];
-            resolve(resolvedResponse);
-          };
-        });
-
-        let serializedBodyForPostMessage;
-        if (typeof bodyForPostMessage === 'string' || bodyForPostMessage == null) {
-            serializedBodyForPostMessage = bodyForPostMessage;
-        } else if (bodyForPostMessage instanceof ReadableStream) {
-            serializedBodyForPostMessage = null;
-        } else {
-            try {
-                serializedBodyForPostMessage = JSON.stringify(bodyForPostMessage);
-            } catch (e) {
-                serializedBodyForPostMessage = null;
-            }
-        }
-
-        const messageOptions = {
-            method: effectiveOptions.method,
-            headers: Object.fromEntries(new Headers(effectiveOptions.headers).entries()),
-            body: serializedBodyForPostMessage
-        };
-
-        window.parent.postMessage({
-          type: 'requestFetch',
-          url: actualUrl,
-          modelName: modelName,
-          options: messageOptions,
-          promiseId: promiseId,
-        }, '*');
-
-        return promise;
-      }
-      return originalFetch.apply(window, fetchCallArgs);
-    }
-    return originalFetch.apply(window, fetchCallArgs);
-  };
-
-  window.addEventListener('message', function(event) {
-    if (event.data && event.data.type === 'resolveFetch') {
-      const { promiseId, response } = event.data;
-      if (pendingFetchResolvers[promiseId]) {
-        try {
-          const reconstructedResponse = new Response(response.body, {
-            status: response.status,
-            statusText: response.statusText,
-            headers: new Headers(response.headers),
-          });
-          pendingFetchResolvers[promiseId](reconstructedResponse);
-        } catch (error) {
-          pendingFetchResolvers[promiseId](new Response(null, { status: 500, statusText: "Interceptor Response Reconstruction Error" }));
-        }
-      }
-    }
-  });
-
-}))({"textModelName":"gemini-3-flash-preview","imageModelName":"imagen-4.0-generate-001","imageEditModelName":"gemini-3.1-flash-image","imageTransformModelName":"gemini-3-pro-image","videoModelName":"veo-2.0-generate-001","ttsModelName":"gemini-2.5-flash-preview-tts","deprecatedTextModelNames":["gemini-2.0-flash","gemini-2.5-flash","gemini-2.5-flash-preview-04-17","gemini-2.5-flash-preview-05-20","gemini-2.5-flash-preview-09-2025"],"deprecatedImageModelNames":["imagen-3.0-generate-001","imagen-3.0-generate-002"],"deprecatedGenerateImageModelNames":["gemini-2.5-flash-image-preview","gemini-2.5-flash-image","gemini-3.1-flash-image-preview"],"deprecatedImageTransformModelNames":["gemini-3-pro-image-preview-11-2025"]})</script><script data-bard-client-injected="true">(function() {
-  function normalizeSlug(str) {
-    try {
-      return str
-        .trim()
-        .toLowerCase()
-        .replace(/[^p{L}p{N}s_-]/gu, '')
-        .replace(/s+/g, '-');
-    } catch (e) {
-      return str
-        .trim()
-        .toLowerCase()
-        .replace(/[^a-z0-9s_-]/g, '')
-        .replace(/s+/g, '-');
-    }
-  }
-
-  function findTargetElement(hash) {
-    if (!hash || hash === '#') {
-      return null;
-    }
-    const rawId = hash.startsWith('#') ? hash.slice(1) : hash;
-    let decodedId = rawId;
-    try {
-      decodedId = decodeURIComponent(rawId);
-    } catch (e) {
-      // Ignore URI malformed errors.
+    header {
+      margin-bottom: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
     }
 
-    // 1. Direct ID match (raw and decoded).
-    let target = document.getElementById(rawId) || document.getElementById(decodedId);
-    if (target) {
-      return target;
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text-main);
     }
 
-    // 2. Name attribute match (<a name="...">).
-    try {
-      if (typeof CSS !== 'undefined' && CSS.escape) {
-        target =
-          document.querySelector('[name="' + CSS.escape(rawId) + '"]') ||
-          document.querySelector('[name="' + CSS.escape(decodedId) + '"]');
-      } else {
-        const namedElements = document.getElementsByName(rawId);
-        if (namedElements && namedElements.length > 0) {
-          return namedElements[0];
-        }
-      }
-    } catch (e) {
-      // Ignore querySelector syntax errors.
-    }
-    if (target) {
-      return target;
+    .subtitle {
+      font-size: 0.875rem;
+      color: var(--text-muted);
     }
 
-    // 3. Match heading text by slug (for Markdown TOCs where headings lack explicit IDs).
-    const targetSlug = normalizeSlug(decodedId);
-    if (targetSlug) {
-      for (const heading of document.querySelectorAll('h1, h2, h3, h4, h5, h6')) {
-        if (normalizeSlug(heading.textContent || '') === targetSlug) {
-          return heading;
-        }
+    .main-grid {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 1.5rem;
+      flex: 1;
+    }
+
+    @media (max-width: 900px) {
+      .main-grid {
+        grid-template-columns: 1fr;
       }
     }
 
-    return null;
-  }
-
-  document.addEventListener('click', function(event) {
-    const target = event.target;
-    const anchor = target && typeof target.closest === 'function' ? target.closest('a') : null;
-    if (!anchor) {
-      return;
+    .card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 0.75rem;
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
     }
 
-    const href = anchor.getAttribute('href');
-    if (
-      !href ||
-      href.trim().toLowerCase().startsWith('javascript:') ||
-      anchor.hasAttribute('download')
-    ) {
-      return;
+    .card-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
-    // Check if the link is an in-page hash / anchor link.
-    if (href.startsWith('#')) {
-      event.preventDefault();
-      const targetElement = findTargetElement(href);
-      if (targetElement) {
-        targetElement.scrollIntoView({behavior: 'smooth', block: 'start'});
-      }
-      return;
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
     }
 
-    // Check if the URL has the same origin/pathname but with a hash.
-    try {
-      const url = new URL(anchor.href, window.location.href);
-      if (
-        url.hash &&
-        url.origin === window.location.origin &&
-        url.pathname === window.location.pathname
-      ) {
-        event.preventDefault();
-        const targetElement = findTargetElement(url.hash);
-        if (targetElement) {
-          targetElement.scrollIntoView({behavior: 'smooth', block: 'start'});
-        }
-        return;
-      }
-    } catch (e) {
-      // Fall through if URL parsing fails.
+    label {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-weight: 500;
     }
 
-    // For all external or full navigation links, prevent iframe-level navigation
-    // (which breaks in AGSA WebView or sandboxed iframes) and ensure they open
-    // safely in a new tab/window.
-    if (anchor.target !== '_blank') {
-      event.preventDefault();
-      window.open(anchor.href, '_blank', 'noopener,noreferrer');
+    select, input, button {
+      background-color: var(--bg-input);
+      color: var(--text-main);
+      border: 1px solid var(--border);
+      padding: 0.6rem 0.8rem;
+      border-radius: 0.375rem;
+      font-size: 0.9rem;
+      outline: none;
     }
-  }, {capture: true});
-})();</script><script data-bard-client-injected="true">(function(){'use strict';function a(){window.parent.postMessage({type:"interaction"},"*")}window.addEventListener("click",a,{capture:!0,passive:!0});window.addEventListener("touchstart",a,{capture:!0,passive:!0});window.addEventListener("keydown",a,{capture:!0,passive:!0});}).call(this);
-</script><script data-bard-client-injected="true">(function() {
-  const originalConsoleLog = console.log;
-  const originalConsoleError = console.error;
 
-    /**
-   * Normalizes an error event or a promise rejection reason into a structured error object.
-   * @param {*} errorEventOrReason The error object or reason.
-   * @return {object} Structured error data { message, name, stack }.
-   */
-  function getErrorObject(errorEventOrReason) {
-    if (errorEventOrReason instanceof Error) {
-      return {
-        message: errorEventOrReason.message,
-        name: errorEventOrReason.name,
-        stack: errorEventOrReason.stack,
-      };
+    select:focus, input:focus {
+      border-color: var(--accent);
     }
-    // Fallback for non-Error objects.
-    try {
-      return {
-        message: JSON.stringify(errorEventOrReason),
-        name: 'UnknownErrorType',
-        stack: null,
-      };
-    } catch (e) {
-      return {
-        message: String(errorEventOrReason),
-        name: 'UnknownErrorTypeNonStringifiable',
-        stack: null,
-      };
+
+    button {
+      background-color: var(--accent);
+      color: white;
+      border: none;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.2s;
     }
-  }
 
-  /**
-   * Converts an array of arguments (from log/error) into a single string.
-   * Handles Error objects specially to include their message and stack.
-   * @param {Array<*>} args - Arguments passed to console methods.
-   * @return {string} A string representation of the arguments.
-   */
-  function stringifyArgs(args) {
-    return args
-      .map((arg) => {
-        if (arg instanceof Error) {
-          const {message, stack} = arg;
-          return `Error: ${message}${stack ? ('\nStack: ' + stack) : ''}`;
-        }
-        if (typeof arg === 'object' && arg !== null) {
-          try {
-            return JSON.stringify(arg);
-          } catch (error) {
-            return '[Circular Object]';
-          }
-        } else {
-          return String(arg);
-        }
-      })
-      .join(' ');
-  }
-
-  console.log = function(...args) {
-    const logString = stringifyArgs(args);
-    window.parent.postMessage({ type: 'log', message: logString }, '*');
-    originalConsoleLog.apply(console, args);
-  };
-
-  console.error = function(...args) {
-    let errorData;
-    if (args.length > 0 && args[0] instanceof Error) {
-      const err = args[0];
-      // If the first arg is an Error, capture its details.
-      errorData = {
-        type: 'error',
-        source: 'CONSOLE_ERROR',
-        ...getErrorObject(err),
-        rawArgsString: stringifyArgs(args.slice(1)),
-        timestamp: new Date().toISOString(),
-      };
-    } else {
-      // If not an Error object, treat all args as a general error message.
-      errorData = {
-        type: 'error',
-        source: 'CONSOLE_ERROR',
-        message: stringifyArgs(args),
-        name: 'ConsoleLoggedError',
-        stack: null,
-        timestamp: new Date().toISOString(),
-      };
+    button:hover {
+      background-color: var(--accent-hover);
     }
-    window.parent.postMessage(errorData, '*');
-    originalConsoleError.apply(console, args);
-  };
 
-  // Listen for global unhandled synchronous errors.
-  window.addEventListener('error', function(event) {
-    const errorDetails = event.error ? getErrorObject(event.error) : {
-      message: event.message,
-      name: 'GlobalError',
-      stack: null,
-      filename: event.filename,
-      lineno: event.lineno,
-      colno: event.colno,
-    };
+    button.secondary {
+      background-color: transparent;
+      border: 1px solid var(--border);
+      color: var(--text-main);
+    }
 
-    window.parent.postMessage({
-      type: 'error',
-      source: 'global',
-      ...errorDetails,
-      message: errorDetails.message || event.message,
-      timestamp: new Date().toISOString(),
-    }, '*');
-  });
+    button.secondary:hover {
+      background-color: var(--bg-input);
+    }
 
-  // Listen for unhandled promise rejections (asynchronous errors).
-  window.addEventListener('unhandledrejection', function(event) {
-    const errorDetails = getErrorObject(event.reason);
+    .custom-tuning-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 0.4rem;
+    }
 
-    window.parent.postMessage({
-      type: 'error',
-      source: 'unhandledrejection',
-      ...errorDetails,
-      message: errorDetails.message || 'Unhandled Promise Rejection',
-      timestamp: new Date().toISOString(),
-    }, '*');
-  });
+    .custom-tuning-grid input {
+      text-align: center;
+      padding: 0.4rem 0.2rem;
+      text-transform: uppercase;
+    }
 
-})();</script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DADGAD &amp; Partial Capo Chord Analyzer</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        amberGold: '#F59E0B',
-                        cyanAccent: '#06B6D4',
-                        roseAccent: '#F43F5E',
-                        woodDark: '#1E1B18',
-                        woodFret: '#2A2421',
-                        fretboardWood: '#181412',
-                        darkBg: '#0F172A',
-                        panelBg: '#1E293B'
-                    }
-                }
-            }
-        }
-    </script>
-    <!-- Lucide Icons CDN -->
-    <script src="https://unpkg.com/lucide@latest" crossorigin="anonymous"></script>
-    <style>
-        body {
-            font-family: 'Inter', system-ui, -apple-system, sans-serif;
-            user-select: none;
-        }
+    /* Fretboard Container */
+    .fretboard-container {
+      overflow-x: auto;
+      padding-bottom: 1rem;
+    }
 
-        .fretboard-container {
-            background: linear-gradient(180deg, #1f1a17 0%, #120e0c 100%);
-            box-shadow: inset 0 0 25px rgba(0,0,0,0.85);
-        }
+    .fretboard {
+      background-color: var(--fretboard-wood);
+      border-radius: 0.5rem;
+      position: relative;
+      min-width: 900px;
+      margin-top: 1rem;
+      border: 2px solid #111;
+      box-shadow: inset 0 0 20px rgba(0,0,0,0.8);
+    }
 
-        .fret-wire {
-            background: linear-gradient(90deg, #d1d5db 0%, #9ca3af 50%, #4b5563 100%);
-            box-shadow: 1px 0 2px rgba(0,0,0,0.5);
-        }
+    .fret-headers {
+      display: grid;
+      grid-template-columns: 40px repeat(12, 1fr);
+      background-color: var(--bg-card);
+      border-radius: 0.5rem 0.5rem 0 0;
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      padding: 0.4rem 0;
+      border: 1px solid var(--border);
+    }
 
-        .nut-wire {
-            background: linear-gradient(90deg, #fef3c7 0%, #fde68a 100%);
-            box-shadow: 3px 0 6px rgba(0,0,0,0.9);
-        }
+    .string-row {
+      display: grid;
+      grid-template-columns: 40px repeat(12, 1fr);
+      height: 48px;
+      position: relative;
+    }
 
-        .guitar-string {
-            position: absolute;
-            width: 100%;
-            transform: translateY(-50%);
-            pointer-events: none;
-            z-index: 10;
-        }
+    .string-label-cell {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #111827;
+      border-right: 2px solid #374151;
+      z-index: 10;
+    }
 
-        /* String Gauges */
-        .string-6 { height: 4.8px; background: linear-gradient(180deg, #d1d5db, #6b7280); }
-        .string-5 { height: 4.0px; background: linear-gradient(180deg, #d1d5db, #6b7280); }
-        .string-4 { height: 3.2px; background: linear-gradient(180deg, #e5e7eb, #9ca3af); }
-        .string-3 { height: 2.4px; background: linear-gradient(180deg, #f3f4f6, #9ca3af); }
-        .string-2 { height: 1.8px; background: linear-gradient(180deg, #ffffff, #d1d5db); }
-        .string-1 { height: 1.3px; background: linear-gradient(180deg, #ffffff, #e5e7eb); }
+    .mute-btn {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 0.8rem;
+      background-color: #374151;
+      color: var(--text-muted);
+      border: none;
+    }
 
-        /* Capo Overlay */
-        .capo-bar {
-            background: linear-gradient(180deg, #06b6d4 0%, #0891b2 100%);
-            box-shadow: 0 0 12px rgba(6, 182, 212, 0.6), inset 0 1px 1px rgba(255,255,255,0.4);
-            border-radius: 4px;
-            transition: all 0.2s ease;
-            z-index: 25;
-        }
+    .mute-btn.muted {
+      background-color: var(--mute-color);
+      color: white;
+    }
 
-        .note-marker {
-            transition: transform 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.2s;
-            z-index: 30;
-        }
+    .fret-cell {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-right: 2px solid var(--fret-wire);
+      cursor: pointer;
+    }
 
-        .note-marker:hover {
-            transform: translate(-50%, -50%) scale(1.15);
-        }
+    .fret-cell.nut {
+      border-right: 6px solid var(--nut-color);
+      background-color: rgba(255,255,255,0.03);
+    }
 
-        /* Custom Scrollbars */
-        ::-webkit-scrollbar {
-            height: 8px;
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #0f172a;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #334155;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #475569;
-        }
-    </style>
-<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.pointer-events-none{pointer-events:none}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:0px}.-bottom-10{bottom:-2.5rem}.-left-10{left:-2.5rem}.-right-10{right:-2.5rem}.-top-10{top:-2.5rem}.right-4{right:1rem}.top-0{top:0px}.top-4{top:1rem}.bottom-0{bottom:0px}.bottom-1{bottom:0.25rem}.top-1\/2{top:50%}.top-1\/3{top:33.333333%}.top-2\/3{top:66.666667%}.z-50{z-index:50}.z-10{z-index:10}.z-20{z-index:20}.z-30{z-index:30}.z-40{z-index:40}.mx-auto{margin-left:auto;margin-right:auto}.mb-1{margin-bottom:0.25rem}.mb-2{margin-bottom:0.5rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.ml-auto{margin-left:auto}.mt-1{margin-top:0.25rem}.mt-6{margin-top:1.5rem}.block{display:block}.flex{display:flex}.grid{display:grid}.hidden{display:none}.h-3{height:0.75rem}.h-3\.5{height:0.875rem}.h-36{height:9rem}.h-4{height:1rem}.h-48{height:12rem}.h-5{height:1.25rem}.h-6{height:1.5rem}.h-\[280px\]{height:280px}.h-2\.5{height:0.625rem}.max-h-32{max-height:8rem}.min-h-screen{min-height:100vh}.w-16{width:4rem}.w-3{width:0.75rem}.w-3\.5{width:0.875rem}.w-4{width:1rem}.w-48{width:12rem}.w-5{width:1.25rem}.w-6{width:1.5rem}.w-full{width:100%}.w-1{width:0.25rem}.w-2{width:0.5rem}.w-2\.5{width:0.625rem}.min-w-\[880px\]{min-width:880px}.max-w-7xl{max-width:80rem}.max-w-md{max-width:28rem}.max-w-xs{max-width:20rem}.flex-grow{flex-grow:1}.-translate-x-1\/2{--tw-translate-x:-50%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.-translate-y-1\/2{--tw-translate-y:-50%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.cursor-pointer{cursor:pointer}.select-none{-webkit-user-select:none;user-select:none}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.grid-cols-6{grid-template-columns:repeat(6, minmax(0, 1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:0.25rem}.gap-1\.5{gap:0.375rem}.gap-2{gap:0.5rem}.gap-3{gap:0.75rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.space-y-3 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.75rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.overflow-x-auto{overflow-x:auto}.overflow-y-auto{overflow-y:auto}.overflow-x-hidden{overflow-x:hidden}.rounded{border-radius:0.25rem}.rounded-2xl{border-radius:1rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-md{border-radius:0.375rem}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-amberGold\/30{border-color:rgb(245 158 11 / 0.3)}.border-slate-700{--tw-border-opacity:1;border-color:rgb(51 65 85 / var(--tw-border-opacity, 1))}.border-slate-700\/60{border-color:rgb(51 65 85 / 0.6)}.border-slate-700\/70{border-color:rgb(51 65 85 / 0.7)}.border-slate-800{--tw-border-opacity:1;border-color:rgb(30 41 59 / var(--tw-border-opacity, 1))}.border-stone-800{--tw-border-opacity:1;border-color:rgb(41 37 36 / var(--tw-border-opacity, 1))}.border-slate-600{--tw-border-opacity:1;border-color:rgb(71 85 105 / var(--tw-border-opacity, 1))}.bg-amberGold{--tw-bg-opacity:1;background-color:rgb(245 158 11 / var(--tw-bg-opacity, 1))}.bg-amberGold\/10{background-color:rgb(245 158 11 / 0.1)}.bg-amberGold\/5{background-color:rgb(245 158 11 / 0.05)}.bg-black\/70{background-color:rgb(0 0 0 / 0.7)}.bg-cyanAccent{--tw-bg-opacity:1;background-color:rgb(6 182 212 / var(--tw-bg-opacity, 1))}.bg-cyanAccent\/5{background-color:rgb(6 182 212 / 0.05)}.bg-darkBg{--tw-bg-opacity:1;background-color:rgb(15 23 42 / var(--tw-bg-opacity, 1))}.bg-panelBg{--tw-bg-opacity:1;background-color:rgb(30 41 59 / var(--tw-bg-opacity, 1))}.bg-panelBg\/60{background-color:rgb(30 41 59 / 0.6)}.bg-panelBg\/80{background-color:rgb(30 41 59 / 0.8)}.bg-slate-800{--tw-bg-opacity:1;background-color:rgb(30 41 59 / var(--tw-bg-opacity, 1))}.bg-slate-900{--tw-bg-opacity:1;background-color:rgb(15 23 42 / var(--tw-bg-opacity, 1))}.bg-slate-900\/60{background-color:rgb(15 23 42 / 0.6)}.bg-slate-900\/80{background-color:rgb(15 23 42 / 0.8)}.bg-slate-900\/90{background-color:rgb(15 23 42 / 0.9)}.bg-slate-500\/60{background-color:rgb(100 116 139 / 0.6)}.bg-slate-600\/50{background-color:rgb(71 85 105 / 0.5)}.bg-gradient-to-r{background-image:linear-gradient(to right, var(--tw-gradient-stops))}.from-amberGold{--tw-gradient-from:#F59E0B var(--tw-gradient-from-position);--tw-gradient-to:rgb(245 158 11 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.via-amber-200{--tw-gradient-to:rgb(253 230 138 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), #fde68a var(--tw-gradient-via-position), var(--tw-gradient-to)}.to-cyanAccent{--tw-gradient-to:#06B6D4 var(--tw-gradient-to-position)}.bg-clip-text{-webkit-background-clip:text;background-clip:text}.p-1{padding:0.25rem}.p-2{padding:0.5rem}.p-2\.5{padding:0.625rem}.p-3{padding:0.75rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.p-0\.5{padding:0.125rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-2\.5{padding-left:0.625rem;padding-right:0.625rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-4{padding-left:1rem;padding-right:1rem}.py-0\.5{padding-top:0.125rem;padding-bottom:0.125rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.pb-2{padding-bottom:0.5rem}.pr-1{padding-right:0.25rem}.pt-2{padding-top:0.5rem}.pt-3{padding-top:0.75rem}.pt-4{padding-top:1rem}.text-center{text-align:center}.font-mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-\[10px\]{font-size:10px}.text-\[11px\]{font-size:11px}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.text-\[9px\]{font-size:9px}.font-black{font-weight:900}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-medium{font-weight:500}.font-normal{font-weight:400}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.italic{font-style:italic}.tracking-tight{letter-spacing:-0.025em}.tracking-wider{letter-spacing:0.05em}.text-amberGold{--tw-text-opacity:1;color:rgb(245 158 11 / var(--tw-text-opacity, 1))}.text-cyanAccent{--tw-text-opacity:1;color:rgb(6 182 212 / var(--tw-text-opacity, 1))}.text-slate-100{--tw-text-opacity:1;color:rgb(241 245 249 / var(--tw-text-opacity, 1))}.text-slate-200{--tw-text-opacity:1;color:rgb(226 232 240 / var(--tw-text-opacity, 1))}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225 / var(--tw-text-opacity, 1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity, 1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139 / var(--tw-text-opacity, 1))}.text-slate-950{--tw-text-opacity:1;color:rgb(2 6 23 / var(--tw-text-opacity, 1))}.text-transparent{color:transparent}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.underline{-webkit-text-decoration-line:underline;text-decoration-line:underline}.opacity-70{opacity:0.7}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-amberGold\/20{--tw-shadow-color:rgb(245 158 11 / 0.2);--tw-shadow:var(--tw-shadow-colored)}.blur-3xl{--tw-blur:blur(64px);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.backdrop-blur-md{--tw-backdrop-blur:blur(12px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.backdrop-blur-sm{--tw-backdrop-blur:blur(4px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-150{transition-duration:150ms}.hover\:border-cyanAccent:hover{--tw-border-opacity:1;border-color:rgb(6 182 212 / var(--tw-border-opacity, 1))}.hover\:border-amberGold:hover{--tw-border-opacity:1;border-color:rgb(245 158 11 / var(--tw-border-opacity, 1))}.hover\:bg-amber-500:hover{--tw-bg-opacity:1;background-color:rgb(245 158 11 / var(--tw-bg-opacity, 1))}.hover\:bg-cyan-600:hover{--tw-bg-opacity:1;background-color:rgb(8 145 178 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-700:hover{--tw-bg-opacity:1;background-color:rgb(51 65 85 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-800:hover{--tw-bg-opacity:1;background-color:rgb(30 41 59 / var(--tw-bg-opacity, 1))}.hover\:bg-amberGold\/10:hover{background-color:rgb(245 158 11 / 0.1)}.hover\:text-slate-200:hover{--tw-text-opacity:1;color:rgb(226 232 240 / var(--tw-text-opacity, 1))}.hover\:text-slate-300:hover{--tw-text-opacity:1;color:rgb(203 213 225 / var(--tw-text-opacity, 1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.hover\:underline:hover{-webkit-text-decoration-line:underline;text-decoration-line:underline}.hover\:opacity-100:hover{opacity:1}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.focus\:ring-amberGold:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(245 158 11 / var(--tw-ring-opacity, 1))}.active\:scale-95:active{--tw-scale-x:.95;--tw-scale-y:.95;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@media (min-width: 640px){.sm\:flex-row{flex-direction:row}.sm\:items-center{align-items:center}.sm\:text-5xl{font-size:3rem;line-height:1}.sm\:text-sm{font-size:0.875rem;line-height:1.25rem}}@media (min-width: 768px){.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:p-6{padding:1.5rem}}@media (min-width: 1024px){.lg\:col-span-2{grid-column:span 2 / span 2}.lg\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}}</style></head>
-<body class="bg-darkBg text-slate-100 min-h-screen flex flex-col justify-between overflow-x-hidden">
+    /* Visual String Line */
+    .string-line {
+      position: absolute;
+      left: 0;
+      right: 0;
+      background-color: var(--string-wire);
+      z-index: 1;
+      pointer-events: none;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.5);
+    }
 
-    <!-- Header / Banner -->
-    <header class="bg-panelBg/80 backdrop-blur-md border-b border-slate-700/60 sticky top-0 z-50 px-4 py-3">
-        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
-            <div class="flex items-center gap-3">
-                <div class="p-2 bg-amberGold/10 rounded-xl border border-amberGold/30 text-amberGold">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="music-4" aria-hidden="true" class="lucide lucide-music-4 w-6 h-6"><path d="M21 16V3a1 1 0 0 0-1.28-.96l-10 2.917a1 1 0 0 0-.72.96V19"></path><path d="M21 6 9 9.5"></path><circle cx="18" cy="16" r="3"></circle><circle cx="6" cy="19" r="3"></circle></svg>
-                </div>
-                <div>
-                    <h1 class="text-xl font-bold bg-gradient-to-r from-amberGold via-amber-200 to-cyanAccent bg-clip-text text-transparent">
-                        Capo Lab &amp; Chord Finder
-                    </h1>
-                    <p class="text-xs text-slate-400">DADGAD, Double Drop D, Joni Mitchell &amp; Custom Tunings with Partial Capo Analyzer</p>
-                </div>
-            </div>
+    /* Note Marker */
+    .note-marker {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background-color: var(--note-default);
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 700;
+      z-index: 5;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+      transition: transform 0.1s;
+    }
 
-            <!-- Header Actions -->
-            <div class="flex items-center gap-2 flex-wrap">
-                <button id="strumBtn" onclick="app.strumCurrentChord()" class="flex items-center gap-2 px-4 py-2 bg-amberGold hover:bg-amber-500 text-slate-950 font-semibold rounded-lg shadow-lg shadow-amberGold/20 transition duration-150 active:scale-95 text-xs sm:text-sm">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="volume-2" aria-hidden="true" class="lucide lucide-volume-2 w-4 h-4"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"></path><path d="M16 9a5 5 0 0 1 0 6"></path><path d="M19.364 18.364a9 9 0 0 0 0-12.728"></path></svg>
-                    Strum Chord
-                </button>
-                <button onclick="app.unmuteAll()" class="px-3 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 font-medium text-xs rounded-lg border border-slate-700 transition">
-                    Unmute All
-                </button>
-                <button onclick="app.clearFingers()" class="px-3 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 font-medium text-xs rounded-lg border border-slate-700 transition">
-                    Clear Frets
-                </button>
-            </div>
+    .note-marker.capo-note {
+      background-color: #eab308;
+      color: #000;
+    }
+
+    .note-marker.open-note {
+      background-color: #10b981;
+      color: #000;
+    }
+
+    .fret-marker-dots {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      display: grid;
+      grid-template-columns: 40px repeat(12, 1fr);
+    }
+
+    .dot-cell {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+    }
+
+    /* Output Panel */
+    .chord-display {
+      background-color: var(--bg-input);
+      border-radius: 0.5rem;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .chord-name {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--accent);
+      margin-bottom: 0.25rem;
+    }
+
+    .chord-details {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .capo-controls {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .capo-row {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .capo-row select {
+      flex: 1;
+    }
+
+    footer {
+      margin-top: auto;
+      padding-top: 1.5rem;
+      text-align: center;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    footer a {
+      color: var(--text-muted);
+      text-decoration: none;
+      opacity: 0.6;
+      transition: opacity 0.2s;
+    }
+
+    footer a:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div>
+      <h1>Fretboard & Capo Analyzer</h1>
+      <div class="subtitle">Interactive alternate tunings, partial capos & reverse chord lookup</div>
+    </div>
+    <button id="strum-btn">🔊 Strum Chord</button>
+  </header>
+
+  <div class="main-grid">
+    <!-- Controls Sidebar -->
+    <div class="card">
+      <div class="card-title">Tuning & Capos</div>
+      
+      <div class="form-group">
+        <label for="tuning-preset">Tuning Presets</label>
+        <select id="tuning-preset">
+          <option value="standard">Standard (E2 A2 D3 G3 B3 E4)</option>
+          <option value="dadgad">DADGAD (D2 A2 D3 G3 A3 D4)</option>
+          <option value="double-drop-d">Double Drop D (D2 A2 D3 G3 B3 D4)</option>
+          <option value="drop-d">Drop D (D2 A2 D3 G3 B3 E4)</option>
+          <option value="open-d">Open D (D2 A2 D3 F#3 A3 D4)</option>
+          <option value="open-g">Open G (D2 G2 D3 G3 B3 D4)</option>
+          <option value="half-step-down">Half-Step Down (Eb2 Ab2 Db3 Gb3 Bb3 Eb4)</option>
+          
+          <!-- Joni Mitchell Signature Tunings -->
+          <option value="jm-coyote">Joni: Open C13 — CGDFCE ("Coyote", "Amelia")</option>
+          <option value="jm-seagull">Joni: Open C — CGCGCE ("Song to a Seagull", "Cactus Tree")</option>
+          <option value="jm-hejira">Joni: Hejira Tuning — BF#C#EF#B ("Hejira")</option>
+          <option value="jm-passion">Joni: Open D Variant — DAEF#AD ("Passion Play")</option>
+          <option value="jm-for-the-roses">Joni: Low Open G — GGDGBD ("For the Roses")</option>
+          
+          <option value="custom">Custom Tuning...</option>
+        </select>
+      </div>
+
+      <!-- Custom Tuning Input Grid (Low to High: String 6 to 1) -->
+      <div id="custom-tuning-panel" class="form-group" style="display: none;">
+        <label>Custom String Pitches (Str 6 to Str 1)</label>
+        <div class="custom-tuning-grid">
+          <input type="text" id="str-6" value="E2" maxlength="3">
+          <input type="text" id="str-5" value="A2" maxlength="3">
+          <input type="text" id="str-4" value="D3" maxlength="3">
+          <input type="text" id="str-3" value="G3" maxlength="3">
+          <input type="text" id="str-2" value="B3" maxlength="3">
+          <input type="text" id="str-1" value="E4" maxlength="3">
         </div>
-    </header>
+        <button id="apply-custom-btn" class="secondary" style="margin-top: 0.4rem;">Apply Custom</button>
+      </div>
 
-    <!-- Main Content -->
-    <main class="max-w-7xl mx-auto w-full p-4 md:p-6 flex-grow space-y-6">
-
-        <!-- Top Analysis Banner -->
-        <section class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            <!-- Chord Detection Box -->
-            <div class="lg:col-span-2 bg-panelBg border border-slate-700/70 rounded-2xl p-5 shadow-xl flex flex-col justify-between relative overflow-hidden">
-                <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-amberGold/5 rounded-full blur-3xl pointer-events-none"></div>
-                <div class="absolute -left-10 -top-10 w-48 h-48 bg-cyanAccent/5 rounded-full blur-3xl pointer-events-none"></div>
-
-                <div class="flex flex-wrap items-start justify-between gap-4">
-                    <div>
-                        <span class="text-xs font-semibold uppercase tracking-wider text-amberGold flex items-center gap-1">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="sparkles" aria-hidden="true" class="lucide lucide-sparkles w-3.5 h-3.5"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"></path><path d="M20 2v4"></path><path d="M22 4h-4"></path><circle cx="4" cy="20" r="2"></circle></svg> Detected Chord
-                        </span>
-                        <div id="chordNameDisplay" class="text-4xl sm:text-5xl font-black text-white mt-1 tracking-tight">D5</div>
-                        <div id="chordFormulaDisplay" class="text-sm text-slate-400 mt-1 flex items-center gap-2">
-                            <span>Formula: <strong class="text-slate-200" id="formulaText">R - P5</strong></span>
-                        </div>
-                    </div>
-
-                    <!-- Alternate Chord Interpretations -->
-                    <div id="altChordsBox" class="bg-slate-900/60 border border-slate-800 rounded-xl p-3 max-w-xs w-full">
-                        <span class="text-xs text-slate-400 font-medium block mb-1">Alternative Names:</span>
-                        <div id="altChordsList" class="text-xs text-slate-300 flex flex-wrap gap-1.5">
-                            <span class="px-2 py-1 bg-slate-800 border border-slate-700 rounded text-amberGold font-semibold">Dsus4</span>
-                        
-                            <span class="px-2 py-1 bg-slate-800 border border-slate-700 rounded text-amberGold font-semibold">G5/D</span>
-                        
-                            <span class="px-2 py-1 bg-slate-800 border border-slate-700 rounded text-amberGold font-semibold">Gsus2/D</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- String Breakdown Grid -->
-                <div class="mt-6 pt-4 border-t border-slate-800 grid grid-cols-6 gap-2 text-center" id="activeNotesGrid">
-                    <div class="bg-slate-900 border border-slate-800 rounded-lg p-2 flex flex-col items-center">
-                        <span class="text-[10px] text-slate-500 font-bold">1st Str</span>
-                        <span class="text-base font-extrabold text-amberGold">D</span>
-                        <span class="text-[10px] text-slate-400">Fret 0</span>
-                    </div>
-                
-                    <div class="bg-slate-900 border border-slate-800 rounded-lg p-2 flex flex-col items-center">
-                        <span class="text-[10px] text-slate-500 font-bold">2st Str</span>
-                        <span class="text-base font-extrabold text-amberGold">A</span>
-                        <span class="text-[10px] text-slate-400">Fret 0</span>
-                    </div>
-                
-                    <div class="bg-slate-900 border border-slate-800 rounded-lg p-2 flex flex-col items-center">
-                        <span class="text-[10px] text-slate-500 font-bold">3st Str</span>
-                        <span class="text-base font-extrabold text-amberGold">G</span>
-                        <span class="text-[10px] text-slate-400">Fret 0</span>
-                    </div>
-                
-                    <div class="bg-slate-900 border border-slate-800 rounded-lg p-2 flex flex-col items-center">
-                        <span class="text-[10px] text-slate-500 font-bold">4st Str</span>
-                        <span class="text-base font-extrabold text-amberGold">D</span>
-                        <span class="text-[10px] text-slate-400">Fret 0</span>
-                    </div>
-                
-                    <div class="bg-slate-900 border border-slate-800 rounded-lg p-2 flex flex-col items-center">
-                        <span class="text-[10px] text-slate-500 font-bold">5st Str</span>
-                        <span class="text-base font-extrabold text-amberGold">A</span>
-                        <span class="text-[10px] text-slate-400">Fret 0</span>
-                    </div>
-                
-                    <div class="bg-slate-900 border border-slate-800 rounded-lg p-2 flex flex-col items-center">
-                        <span class="text-[10px] text-slate-500 font-bold">6st Str</span>
-                        <span class="text-base font-extrabold text-amberGold">D</span>
-                        <span class="text-[10px] text-slate-400">Fret 0</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tuning & Capo Settings Sidebar -->
-            <div class="bg-panelBg border border-slate-700/70 rounded-2xl p-5 shadow-xl flex flex-col justify-between space-y-4">
-                <div>
-                    <h3 class="text-sm font-bold text-slate-200 uppercase tracking-wider mb-3 flex items-center justify-between">
-                        <span>Tuning &amp; Capos</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="sliders" aria-hidden="true" class="lucide lucide-sliders w-4 h-4 text-cyanAccent"><path d="M10 8h4"></path><path d="M12 21v-9"></path><path d="M12 8V3"></path><path d="M17 16h4"></path><path d="M19 12V3"></path><path d="M19 21v-5"></path><path d="M3 14h4"></path><path d="M5 10V3"></path><path d="M5 21v-7"></path></svg>
-                    </h3>
-
-                    <!-- Preset Tuning Dropdown -->
-                    <div class="mb-3">
-                        <label class="block text-xs text-slate-400 mb-1">Tuning Presets</label>
-                        <select id="presetTuningSelect" onchange="app.changePresetTuning(this.value)" class="w-full bg-slate-900 border border-slate-700 text-slate-200 rounded-lg p-2.5 text-xs font-medium focus:ring-2 focus:ring-amberGold focus:outline-none">
-                            <option value="DADGAD">DADGAD (D2 A2 D3 G3 A3 D4)</option>
-                            <option value="DOUBLE_DROP_D">Double Drop D (D2 A2 D3 G3 B3 D4)</option>
-                            <option value="STANDARD">Standard (E2 A2 D3 G3 B3 E4)</option>
-                            <option value="DROP_D">Drop D (D2 A2 D3 G3 B3 E4)</option>
-                            <option value="OPEN_D">Open D (D2 A2 D3 F#3 A3 D4)</option>
-                            <option value="OPEN_G">Open G (D2 G2 D3 G3 B3 D4)</option>
-                            <option value="HALF_STEP">Half-Step Down (Eb2 Ab2 Db3 Gb3 Bb3 Eb4)</option>
-
-                            <!-- Joni Mitchell Tunings with Song Hints -->
-                            <option value="JONI_COYOTE">Joni: Open C13 — CGDFCE ("Coyote", "Amelia")</option>
-                            <option value="JONI_SEAGULL">Joni: Open C — CGCGCE ("Song to a Seagull", "Cactus Tree")</option>
-                            <option value="JONI_HEJIRA">Joni: Hejira Tuning — BF#C#EF#B ("Hejira", "Refuge of the Roads")</option>
-                            <option value="JONI_PASSION">Joni: Open D Variant — DAEF#AD ("Passion Play", "In France They Kiss On Main Street")</option>
-                            <option value="JONI_FOR_THE_ROSES">Joni: Low Open G — GGDGBD ("For the Roses", "Electricity")</option>
-
-                            <option value="CUSTOM">Custom Tuning...</option>
-                        </select>
-                    </div>
-
-                    <!-- Custom Tuning Inputs (Toggled) -->
-                    <div id="customTuningEditor" class="hidden bg-slate-900/90 border border-amberGold/30 rounded-xl p-3 mb-3 space-y-2">
-                        <div class="flex items-center justify-between">
-                            <span class="text-xs font-bold text-amberGold">Manual String Tuning</span>
-                            <span class="text-[10px] text-slate-400">Low to High (6th -&gt; 1st)</span>
-                        </div>
-                        <div class="grid grid-cols-6 gap-1.5 text-center" id="customStringsInputs"><div class="flex flex-col gap-1">
-                        <span class="text-[9px] text-slate-400">6th</span>
-                        <select onchange="app.updateCustomStringNote(5, this.value, 2)" class="bg-slate-800 text-amberGold text-xs font-bold rounded p-1 border border-slate-700">
-                            <option value="C">C</option><option value="C#">C#</option><option value="D" selected="">D</option><option value="D#">D#</option><option value="E">E</option><option value="F">F</option><option value="F#">F#</option><option value="G">G</option><option value="G#">G#</option><option value="A">A</option><option value="A#">A#</option><option value="B">B</option>
-                        </select>
-                        <select onchange="app.updateCustomStringNote(5, 'D', this.value)" class="bg-slate-800 text-slate-300 text-[10px] rounded p-0.5 border border-slate-700">
-                            <option value="1">Oct 1</option><option value="2" selected="">Oct 2</option><option value="3">Oct 3</option><option value="4">Oct 4</option><option value="5">Oct 5</option>
-                        </select>
-                    </div><div class="flex flex-col gap-1">
-                        <span class="text-[9px] text-slate-400">5th</span>
-                        <select onchange="app.updateCustomStringNote(4, this.value, 2)" class="bg-slate-800 text-amberGold text-xs font-bold rounded p-1 border border-slate-700">
-                            <option value="C">C</option><option value="C#">C#</option><option value="D">D</option><option value="D#">D#</option><option value="E">E</option><option value="F">F</option><option value="F#">F#</option><option value="G">G</option><option value="G#">G#</option><option value="A" selected="">A</option><option value="A#">A#</option><option value="B">B</option>
-                        </select>
-                        <select onchange="app.updateCustomStringNote(4, 'A', this.value)" class="bg-slate-800 text-slate-300 text-[10px] rounded p-0.5 border border-slate-700">
-                            <option value="1">Oct 1</option><option value="2" selected="">Oct 2</option><option value="3">Oct 3</option><option value="4">Oct 4</option><option value="5">Oct 5</option>
-                        </select>
-                    </div><div class="flex flex-col gap-1">
-                        <span class="text-[9px] text-slate-400">4th</span>
-                        <select onchange="app.updateCustomStringNote(3, this.value, 3)" class="bg-slate-800 text-amberGold text-xs font-bold rounded p-1 border border-slate-700">
-                            <option value="C">C</option><option value="C#">C#</option><option value="D" selected="">D</option><option value="D#">D#</option><option value="E">E</option><option value="F">F</option><option value="F#">F#</option><option value="G">G</option><option value="G#">G#</option><option value="A">A</option><option value="A#">A#</option><option value="B">B</option>
-                        </select>
-                        <select onchange="app.updateCustomStringNote(3, 'D', this.value)" class="bg-slate-800 text-slate-300 text-[10px] rounded p-0.5 border border-slate-700">
-                            <option value="1">Oct 1</option><option value="2">Oct 2</option><option value="3" selected="">Oct 3</option><option value="4">Oct 4</option><option value="5">Oct 5</option>
-                        </select>
-                    </div><div class="flex flex-col gap-1">
-                        <span class="text-[9px] text-slate-400">3th</span>
-                        <select onchange="app.updateCustomStringNote(2, this.value, 3)" class="bg-slate-800 text-amberGold text-xs font-bold rounded p-1 border border-slate-700">
-                            <option value="C">C</option><option value="C#">C#</option><option value="D">D</option><option value="D#">D#</option><option value="E">E</option><option value="F">F</option><option value="F#">F#</option><option value="G" selected="">G</option><option value="G#">G#</option><option value="A">A</option><option value="A#">A#</option><option value="B">B</option>
-                        </select>
-                        <select onchange="app.updateCustomStringNote(2, 'G', this.value)" class="bg-slate-800 text-slate-300 text-[10px] rounded p-0.5 border border-slate-700">
-                            <option value="1">Oct 1</option><option value="2">Oct 2</option><option value="3" selected="">Oct 3</option><option value="4">Oct 4</option><option value="5">Oct 5</option>
-                        </select>
-                    </div><div class="flex flex-col gap-1">
-                        <span class="text-[9px] text-slate-400">2th</span>
-                        <select onchange="app.updateCustomStringNote(1, this.value, 3)" class="bg-slate-800 text-amberGold text-xs font-bold rounded p-1 border border-slate-700">
-                            <option value="C">C</option><option value="C#">C#</option><option value="D">D</option><option value="D#">D#</option><option value="E">E</option><option value="F">F</option><option value="F#">F#</option><option value="G">G</option><option value="G#">G#</option><option value="A" selected="">A</option><option value="A#">A#</option><option value="B">B</option>
-                        </select>
-                        <select onchange="app.updateCustomStringNote(1, 'A', this.value)" class="bg-slate-800 text-slate-300 text-[10px] rounded p-0.5 border border-slate-700">
-                            <option value="1">Oct 1</option><option value="2">Oct 2</option><option value="3" selected="">Oct 3</option><option value="4">Oct 4</option><option value="5">Oct 5</option>
-                        </select>
-                    </div><div class="flex flex-col gap-1">
-                        <span class="text-[9px] text-slate-400">1th</span>
-                        <select onchange="app.updateCustomStringNote(0, this.value, 4)" class="bg-slate-800 text-amberGold text-xs font-bold rounded p-1 border border-slate-700">
-                            <option value="C">C</option><option value="C#">C#</option><option value="D" selected="">D</option><option value="D#">D#</option><option value="E">E</option><option value="F">F</option><option value="F#">F#</option><option value="G">G</option><option value="G#">G#</option><option value="A">A</option><option value="A#">A#</option><option value="B">B</option>
-                        </select>
-                        <select onchange="app.updateCustomStringNote(0, 'D', this.value)" class="bg-slate-800 text-slate-300 text-[10px] rounded p-0.5 border border-slate-700">
-                            <option value="1">Oct 1</option><option value="2">Oct 2</option><option value="3">Oct 3</option><option value="4" selected="">Oct 4</option><option value="5">Oct 5</option>
-                        </select>
-                    </div></div>
-                    </div>
-
-                    <!-- Capo List -->
-                    <div>
-                        <div class="flex items-center justify-between mb-2">
-                            <label class="text-xs text-slate-400">Active Capos</label>
-                            <button onclick="app.openCapoModal()" class="text-xs text-cyanAccent hover:underline flex items-center gap-1 font-semibold">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="plus-circle" aria-hidden="true" class="lucide lucide-plus-circle w-3.5 h-3.5"><circle cx="12" cy="12" r="10"></circle><path d="M8 12h8"></path><path d="M12 8v8"></path></svg> Add Capo
-                            </button>
-                        </div>
-                        <div id="capoList" class="space-y-2 max-h-32 overflow-y-auto pr-1">
-                            <!-- Dynamic Capos Rendered Here -->
-                        </div>
-                    </div>
-                </div>
-
-                <div class="pt-3 border-t border-slate-800 text-xs text-slate-400 flex items-center justify-between">
-                    <span>Active Sounding Strings:</span>
-                    <span id="activeStringsCountText" class="font-bold text-amberGold">6 / 6</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- Interactive Fretboard -->
-        <section class="bg-panelBg border border-slate-700/70 rounded-2xl p-5 shadow-2xl space-y-4">
-            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
-                <div>
-                    <h2 class="text-lg font-bold text-white flex items-center gap-2">
-                        Interactive Fretboard
-                        <span class="text-xs font-normal px-2 py-0.5 rounded bg-slate-800 border border-slate-700 text-slate-300">Click nut icons to toggle Mute (X) or Open (O), click frets to place fingers</span>
-                    </h2>
-                    <p class="text-xs text-slate-400">Top = 1st String (High String), Bottom = 6th String (Low String)</p>
-                </div>
-                
-                <div class="flex items-center gap-2">
-                    <div class="flex items-center gap-1 bg-slate-900 border border-slate-800 rounded-lg p-1 text-xs">
-                        <span class="px-2 text-slate-400">Frets:</span>
-                        <button onclick="app.setFretCount(12)" class="px-2 py-0.5 rounded text-slate-300 hover:bg-slate-800 font-medium">12</button>
-                        <button onclick="app.setFretCount(15)" class="px-2 py-0.5 bg-amberGold text-slate-950 font-bold rounded">15</button>
-                        <button onclick="app.setFretCount(18)" class="px-2 py-0.5 rounded text-slate-300 hover:bg-slate-800 font-medium">18</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Fretboard Container -->
-            <div class="overflow-x-auto pb-2">
-                <div id="fretboard" class="fretboard-container relative min-w-[880px] h-[280px] rounded-xl border border-stone-800 select-none"><div class="nut-wire absolute top-0 bottom-0 w-2 z-20" style="left: 0%;"></div><div class="fret-wire absolute top-0 bottom-0 w-1 z-10" style="left: 6.66667%;"></div><div class="absolute text-[10px] font-bold text-slate-500 -translate-x-1/2 bottom-1 pointer-events-none" style="left: 3.33333%;">1</div><div class="fret-wire absolute top-0 bottom-0 w-1 z-10" style="left: 13.3333%;"></div><div class="absolute text-[10px] font-bold text-slate-500 -translate-x-1/2 bottom-1 pointer-events-none" style="left: 10%;">2</div><div class="fret-wire absolute top-0 bottom-0 w-1 z-10" style="left: 20%;"></div><div class="absolute w-3 h-3 rounded-full bg-slate-600/50 -translate-x-1/2 top-1/2 -translate-y-1/2 pointer-events-none" style="left: 16.6667%;"></div><div class="absolute text-[10px] font-bold text-slate-500 -translate-x-1/2 bottom-1 pointer-events-none" style="left: 16.6667%;">3</div><div class="fret-wire absolute top-0 bottom-0 w-1 z-10" style="left: 26.6667%;"></div><div class="absolute text-[10px] font-bold text-slate-500 -translate-x-1/2 bottom-1 pointer-events-none" style="left: 23.3333%;">4</div><div class="fret-wire absolute top-0 bottom-0 w-1 z-10" style="left: 33.3333%;"></div><div class="absolute w-3 h-3 rounded-full bg-slate-600/50 -translate-x-1/2 top-1/2 -translate-y-1/2 pointer-events-none" style="left: 30%;"></div><div class="absolute text-[10px] font-bold text-slate-500 -translate-x-1/2 bottom-1 pointer-events-none" style="left: 30%;">5</div><div class="fret-wire absolute top-0 bottom-0 w-1 z-10" style="left: 40%;"></div><div class="absolute text-[10px] font-bold text-slate-500 -translate-x-1/2 bottom-1 pointer-events-none" style="left: 36.6667%;">6</div><div class="fret-wire absolute top-0 bottom-0 w-1 z-10" style="left: 46.6667%;"></div><div class="absolute w-3 h-3 rounded-full bg-slate-600/50 -translate-x-1/2 top-1/2 -translate-y-1/2 pointer-events-none" style="left: 43.3333%;"></div><div class="absolute text-[10px] font-bold text-slate-500 -translate-x-1/2 bottom-1 pointer-events-none" style="left: 43.3333%;">7</div><div class="fret-wire absolute top-0 bottom-0 w-1 z-10" style="left: 53.3333%;"></div><div class="absolute text-[10px] font-bold text-slate-500 -translate-x-1/2 bottom-1 pointer-events-none" style="left: 50%;">8</div><div class="fret-wire absolute top-0 bottom-0 w-1 z-10" style="left: 60%;"></div><div class="absolute w-3 h-3 rounded-full bg-slate-600/50 -translate-x-1/2 top-1/2 -translate-y-1/2 pointer-events-none" style="left: 56.6667%;"></div><div class="absolute text-[10px] font-bold text-slate-500 -translate-x-1/2 bottom-1 pointer-events-none" style="left: 56.6667%;">9</div><div class="fret-wire absolute top-0 bottom-0 w-1 z-10" style="left: 66.6667%;"></div><div class="absolute text-[10px] font-bold text-slate-500 -translate-x-1/2 bottom-1 pointer-events-none" style="left: 63.3333%;">10</div><div class="fret-wire absolute top-0 bottom-0 w-1 z-10" style="left: 73.3333%;"></div><div class="absolute text-[10px] font-bold text-slate-500 -translate-x-1/2 bottom-1 pointer-events-none" style="left: 70%;">11</div><div class="fret-wire absolute top-0 bottom-0 w-1 z-10" style="left: 80%;"></div><div class="absolute w-2.5 h-2.5 rounded-full bg-slate-500/60 -translate-x-1/2 top-1/3 pointer-events-none" style="left: 76.6667%;"></div><div class="absolute w-2.5 h-2.5 rounded-full bg-slate-500/60 -translate-x-1/2 top-2/3 pointer-events-none" style="left: 76.6667%;"></div><div class="absolute text-[10px] font-bold text-slate-500 -translate-x-1/2 bottom-1 pointer-events-none" style="left: 76.6667%;">12</div><div class="fret-wire absolute top-0 bottom-0 w-1 z-10" style="left: 86.6667%;"></div><div class="absolute text-[10px] font-bold text-slate-500 -translate-x-1/2 bottom-1 pointer-events-none" style="left: 83.3333%;">13</div><div class="fret-wire absolute top-0 bottom-0 w-1 z-10" style="left: 93.3333%;"></div><div class="absolute text-[10px] font-bold text-slate-500 -translate-x-1/2 bottom-1 pointer-events-none" style="left: 90%;">14</div><div class="fret-wire absolute top-0 bottom-0 w-1 z-10" style="left: 100%;"></div><div class="absolute w-3 h-3 rounded-full bg-slate-600/50 -translate-x-1/2 top-1/2 -translate-y-1/2 pointer-events-none" style="left: 96.6667%;"></div><div class="absolute text-[10px] font-bold text-slate-500 -translate-x-1/2 bottom-1 pointer-events-none" style="left: 96.6667%;">15</div><div class="guitar-string string-6" style="top: 14.2857%;"></div><div class="absolute z-40 w-6 h-6 rounded-full flex items-center justify-center font-extrabold text-xs cursor-pointer -translate-y-1/2 border transition shadow-md bg-slate-800 text-amberGold border-slate-600 hover:border-amberGold" title="Click to Mute String" style="left: 0.3%; top: 14.2857%;">O</div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 14.2857%; left: 3.33333%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 14.2857%; left: 10%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 14.2857%; left: 16.6667%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 14.2857%; left: 23.3333%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 14.2857%; left: 30%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 14.2857%; left: 36.6667%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 14.2857%; left: 43.3333%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 14.2857%; left: 50%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 14.2857%; left: 56.6667%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 14.2857%; left: 63.3333%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 14.2857%; left: 70%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 14.2857%; left: 76.6667%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 14.2857%; left: 83.3333%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 14.2857%; left: 90%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 14.2857%; left: 96.6667%; width: 5.33333%; height: 11.4286%;"></div><div class="guitar-string string-5" style="top: 28.5714%;"></div><div class="absolute z-40 w-6 h-6 rounded-full flex items-center justify-center font-extrabold text-xs cursor-pointer -translate-y-1/2 border transition shadow-md bg-slate-800 text-amberGold border-slate-600 hover:border-amberGold" title="Click to Mute String" style="left: 0.3%; top: 28.5714%;">O</div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 28.5714%; left: 3.33333%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 28.5714%; left: 10%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 28.5714%; left: 16.6667%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 28.5714%; left: 23.3333%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 28.5714%; left: 30%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 28.5714%; left: 36.6667%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 28.5714%; left: 43.3333%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 28.5714%; left: 50%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 28.5714%; left: 56.6667%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 28.5714%; left: 63.3333%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 28.5714%; left: 70%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 28.5714%; left: 76.6667%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 28.5714%; left: 83.3333%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 28.5714%; left: 90%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 28.5714%; left: 96.6667%; width: 5.33333%; height: 11.4286%;"></div><div class="guitar-string string-4" style="top: 42.8571%;"></div><div class="absolute z-40 w-6 h-6 rounded-full flex items-center justify-center font-extrabold text-xs cursor-pointer -translate-y-1/2 border transition shadow-md bg-slate-800 text-amberGold border-slate-600 hover:border-amberGold" title="Click to Mute String" style="left: 0.3%; top: 42.8571%;">O</div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 42.8571%; left: 3.33333%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 42.8571%; left: 10%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 42.8571%; left: 16.6667%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 42.8571%; left: 23.3333%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 42.8571%; left: 30%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 42.8571%; left: 36.6667%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 42.8571%; left: 43.3333%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 42.8571%; left: 50%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 42.8571%; left: 56.6667%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 42.8571%; left: 63.3333%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 42.8571%; left: 70%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 42.8571%; left: 76.6667%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 42.8571%; left: 83.3333%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 42.8571%; left: 90%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 42.8571%; left: 96.6667%; width: 5.33333%; height: 11.4286%;"></div><div class="guitar-string string-3" style="top: 57.1429%;"></div><div class="absolute z-40 w-6 h-6 rounded-full flex items-center justify-center font-extrabold text-xs cursor-pointer -translate-y-1/2 border transition shadow-md bg-slate-800 text-amberGold border-slate-600 hover:border-amberGold" title="Click to Mute String" style="left: 0.3%; top: 57.1429%;">O</div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 57.1429%; left: 3.33333%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 57.1429%; left: 10%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 57.1429%; left: 16.6667%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 57.1429%; left: 23.3333%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 57.1429%; left: 30%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 57.1429%; left: 36.6667%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 57.1429%; left: 43.3333%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 57.1429%; left: 50%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 57.1429%; left: 56.6667%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 57.1429%; left: 63.3333%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 57.1429%; left: 70%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 57.1429%; left: 76.6667%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 57.1429%; left: 83.3333%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 57.1429%; left: 90%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 57.1429%; left: 96.6667%; width: 5.33333%; height: 11.4286%;"></div><div class="guitar-string string-2" style="top: 71.4286%;"></div><div class="absolute z-40 w-6 h-6 rounded-full flex items-center justify-center font-extrabold text-xs cursor-pointer -translate-y-1/2 border transition shadow-md bg-slate-800 text-amberGold border-slate-600 hover:border-amberGold" title="Click to Mute String" style="left: 0.3%; top: 71.4286%;">O</div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 71.4286%; left: 3.33333%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 71.4286%; left: 10%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 71.4286%; left: 16.6667%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 71.4286%; left: 23.3333%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 71.4286%; left: 30%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 71.4286%; left: 36.6667%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 71.4286%; left: 43.3333%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 71.4286%; left: 50%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 71.4286%; left: 56.6667%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 71.4286%; left: 63.3333%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 71.4286%; left: 70%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 71.4286%; left: 76.6667%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 71.4286%; left: 83.3333%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 71.4286%; left: 90%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 71.4286%; left: 96.6667%; width: 5.33333%; height: 11.4286%;"></div><div class="guitar-string string-1" style="top: 85.7143%;"></div><div class="absolute z-40 w-6 h-6 rounded-full flex items-center justify-center font-extrabold text-xs cursor-pointer -translate-y-1/2 border transition shadow-md bg-slate-800 text-amberGold border-slate-600 hover:border-amberGold" title="Click to Mute String" style="left: 0.3%; top: 85.7143%;">O</div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 85.7143%; left: 3.33333%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 85.7143%; left: 10%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 85.7143%; left: 16.6667%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 85.7143%; left: 23.3333%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 85.7143%; left: 30%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 85.7143%; left: 36.6667%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 85.7143%; left: 43.3333%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 85.7143%; left: 50%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 85.7143%; left: 56.6667%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 85.7143%; left: 63.3333%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 85.7143%; left: 70%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 85.7143%; left: 76.6667%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 85.7143%; left: 83.3333%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 85.7143%; left: 90%; width: 5.33333%; height: 11.4286%;"></div><div class="absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition" style="top: 85.7143%; left: 96.6667%; width: 5.33333%; height: 11.4286%;"></div></div>
-            </div>
-        </section>
-
-        <!-- Transposer & Converter -->
-        <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <!-- Standard Tuning Equivalent -->
-            <div class="bg-panelBg border border-slate-700/70 rounded-2xl p-5 shadow-xl">
-                <h3 class="text-base font-bold text-white mb-2 flex items-center gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="git-compare" aria-hidden="true" class="lucide lucide-git-compare w-5 h-5 text-amberGold"><circle cx="18" cy="18" r="3"></circle><circle cx="6" cy="6" r="3"></circle><path d="M13 6h3a2 2 0 0 1 2 2v7"></path><path d="M11 18H8a2 2 0 0 1-2-2V9"></path></svg>
-                    Standard Tuning Converter
-                </h3>
-                <p class="text-xs text-slate-400 mb-4">Pitch equivalents in Standard Tuning (EADGBE):</p>
-                
-                <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-4 flex flex-col justify-between h-36">
-                    <div class="flex items-center justify-between">
-                        <span id="stdChordTitle" class="text-lg font-bold text-slate-100">D5</span>
-                        <span id="stdVoicingTab" class="text-xs font-mono bg-slate-800 text-amberGold px-2.5 py-1 rounded-md border border-slate-700">0-0-0-0-0-0</span>
-                    </div>
-                    <div class="text-xs text-slate-400">
-                        Pitches (6th to 1st String):
-                        <div id="stdFingerDetails" class="text-slate-200 font-semibold mt-1">Pitches (6th to 1st): D A D G A D</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Key Transposer Tool -->
-            <div class="bg-panelBg border border-slate-700/70 rounded-2xl p-5 shadow-xl">
-                <h3 class="text-base font-bold text-white mb-2 flex items-center gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-right-left" aria-hidden="true" class="lucide lucide-arrow-right-left w-5 h-5 text-cyanAccent"><path d="m16 3 4 4-4 4"></path><path d="M20 7H4"></path><path d="m8 21-4-4 4-4"></path><path d="M4 17h16"></path></svg>
-                    Chord Transposer
-                </h3>
-                <p class="text-xs text-slate-400 mb-3">Transpose current non-muted notes up or down:</p>
-
-                <div class="flex items-center gap-3 mb-4">
-                    <button onclick="app.transposeChord(-1)" class="px-3 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-lg border border-slate-700 flex items-center gap-1 text-sm font-semibold">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="minus" aria-hidden="true" class="lucide lucide-minus w-4 h-4"><path d="M5 12h14"></path></svg> -1 Semitone
-                    </button>
-                    <div id="transposeAmountDisplay" class="text-center font-bold text-amberGold text-lg w-16">
-                        0 ST
-                    </div>
-                    <button onclick="app.transposeChord(1)" class="px-3 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-lg border border-slate-700 flex items-center gap-1 text-sm font-semibold">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="plus" aria-hidden="true" class="lucide lucide-plus w-4 h-4"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg> +1 Semitone
-                    </button>
-                    <button onclick="app.resetTranspose()" class="text-xs text-slate-400 hover:text-slate-200 underline ml-auto">
-                        Reset
-                    </button>
-                </div>
-
-                <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-3 text-xs text-slate-300">
-                    <span class="text-slate-400 block mb-1">Transposed Result Pitch:</span>
-                    <div id="transposedChordName" class="text-xl font-extrabold text-cyanAccent">
-                        Same as original
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Capo Modal -->
-    <div id="capoModal" class="fixed inset-0 bg-black/70 backdrop-blur-sm hidden items-center justify-center z-50 p-4">
-        <div class="bg-panelBg border border-slate-700 rounded-2xl max-w-md w-full p-6 space-y-4 shadow-2xl relative">
-            <button onclick="app.closeCapoModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="x" aria-hidden="true" class="lucide lucide-x w-5 h-5"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
-            </button>
-
-            <h3 class="text-lg font-bold text-white flex items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="layers" aria-hidden="true" class="lucide lucide-layers w-5 h-5 text-cyanAccent"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"></path><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"></path><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"></path></svg> Add Capo Configuration
-            </h3>
-
-            <div class="space-y-3 text-sm">
-                <div>
-                    <label class="block text-xs text-slate-400 mb-1">Capo Coverage Type</label>
-                    <select id="capoTypeSelect" onchange="app.toggleCapoModalCustomStrings()" class="w-full bg-slate-900 border border-slate-700 text-slate-200 rounded-lg p-2.5">
-                        <option value="FULL">Full 6-String Capo</option>
-                        <option value="PARTIAL_ESUS">Partial: Esus / Short (Strings 3, 4, 5)</option>
-                        <option value="PARTIAL_DROP_D">Partial: Drop D style (Strings 1 to 5)</option>
-                        <option value="CUSTOM">Custom String Selection</option>
-                    </select>
-                </div>
-
-                <div>
-                    <label class="block text-xs text-slate-400 mb-1">Fret Position (1 - 12)</label>
-                    <input type="number" id="capoFretInput" min="1" max="12" value="2" class="w-full bg-slate-900 border border-slate-700 text-slate-200 rounded-lg p-2.5 font-bold text-amberGold">
-                </div>
-
-                <div id="customCapoStringsGroup" class="hidden">
-                    <label class="block text-xs text-slate-400 mb-1">Select Covered Strings (1=High String, 6=Low String)</label>
-                    <div class="grid grid-cols-6 gap-2 text-center">
-                        <label class="cursor-pointer bg-slate-900 border border-slate-700 rounded p-2 text-xs hover:border-cyanAccent">
-                            <input type="checkbox" class="capo-string-check" value="1"> 1st
-                        </label>
-                        <label class="cursor-pointer bg-slate-900 border border-slate-700 rounded p-2 text-xs hover:border-cyanAccent">
-                            <input type="checkbox" class="capo-string-check" value="2"> 2nd
-                        </label>
-                        <label class="cursor-pointer bg-slate-900 border border-slate-700 rounded p-2 text-xs hover:border-cyanAccent">
-                            <input type="checkbox" class="capo-string-check" value="3" checked=""> 3rd
-                        </label>
-                        <label class="cursor-pointer bg-slate-900 border border-slate-700 rounded p-2 text-xs hover:border-cyanAccent">
-                            <input type="checkbox" class="capo-string-check" value="4" checked=""> 4th
-                        </label>
-                        <label class="cursor-pointer bg-slate-900 border border-slate-700 rounded p-2 text-xs hover:border-cyanAccent">
-                            <input type="checkbox" class="capo-string-check" value="5" checked=""> 5th
-                        </label>
-                        <label class="cursor-pointer bg-slate-900 border border-slate-700 rounded p-2 text-xs hover:border-cyanAccent">
-                            <input type="checkbox" class="capo-string-check" value="6"> 6th
-                        </label>
-                    </div>
-                </div>
-            </div>
-
-            <div class="flex items-center justify-end gap-2 pt-2 border-t border-slate-800">
-                <button onclick="app.closeCapoModal()" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-semibold rounded-lg">Cancel</button>
-                <button onclick="app.addCapoFromModal()" class="px-4 py-2 bg-cyanAccent hover:bg-cyan-600 text-slate-950 text-xs font-bold rounded-lg shadow-md">Add Capo</button>
-            </div>
+      <div class="form-group">
+        <label>Capo Configuration</label>
+        <div class="capo-controls">
+          <div class="capo-row">
+            <label style="width: 50px;">Fret:</label>
+            <select id="capo-fret">
+              <option value="0">None (Open)</option>
+              <option value="1">Fret 1</option>
+              <option value="2">Fret 2</option>
+              <option value="3">Fret 3</option>
+              <option value="4">Fret 4</option>
+              <option value="5">Fret 5</option>
+              <option value="6">Fret 6</option>
+              <option value="7">Fret 7</option>
+            </select>
+          </div>
+          <div class="capo-row">
+            <label style="width: 50px;">Covers:</label>
+            <select id="capo-coverage">
+              <option value="all">All Strings (1-6)</option>
+              <option value="top-5">Strings 1-5 (Drop Low E)</option>
+              <option value="bottom-5">Strings 2-6</option>
+              <option value="middle-4">Strings 2-5 (DADGAD Style)</option>
+              <option value="treble-3">Strings 1-3</option>
+            </select>
+          </div>
         </div>
+      </div>
+
+      <div class="chord-display">
+        <div class="chord-name" id="detected-chord">--</div>
+        <div class="chord-details" id="chord-notes">Click notes on the fretboard</div>
+      </div>
+
+      <button id="reset-btn" class="secondary">Reset Fingering</button>
     </div>
 
-    <!-- Footer -->
-    <footer class="bg-panelBg/60 border-t border-slate-800 py-3 px-4 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-2">
-        <div>DADGAD, Double Drop D, Joni Mitchell &amp; Partial Capo Chord Analyzer • Music Theory Engine</div>
-        <button onclick="app.downloadAppFile()" class="text-slate-500 hover:text-slate-300 text-[11px] flex items-center gap-1 opacity-70 hover:opacity-100 transition">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="download" aria-hidden="true" class="lucide lucide-download w-3 h-3"><path d="M12 15V3"></path><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><path d="m7 10 5 5 5-5"></path></svg> Download App (.html)
-        </button>
-    </footer>
+    <!-- Main Interactive Area -->
+    <div class="card" style="overflow: hidden;">
+      <div class="card-title">
+        <span>Interactive Fretboard</span>
+        <span style="font-size:0.75rem; color: var(--text-muted); font-weight: normal;">Click frets to toggle fingers | Toggle 'X' to mute string</span>
+      </div>
 
-    <!-- Main Application Logic -->
-    <script>
-        const NOTE_NAMES = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];
-        const FLAT_NAMES = ['C', 'Db', 'D', 'Eb', 'E', 'F', 'Gb', 'G', 'Ab', 'A', 'Bb', 'B'];
+      <div class="fretboard-container">
+        <div class="fret-headers">
+          <div>Mute</div>
+          <div>Open</div>
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div>5</div>
+          <div>6</div>
+          <div>7</div>
+          <div>8</div>
+          <div>9</div>
+          <div>10</div>
+          <div>11</div>
+          <div>12</div>
+        </div>
 
-        // Preset Tunings map from High String (1st) to Low String (6th)
-        const TUNINGS = {
-            DADGAD: { name: 'DADGAD', notes: ['D4', 'A3', 'G3', 'D3', 'A2', 'D2'] },
-            DOUBLE_DROP_D: { name: 'Double Drop D (D-A-D-G-B-D)', notes: ['D4', 'B3', 'G3', 'D3', 'A2', 'D2'] },
-            STANDARD: { name: 'Standard', notes: ['E4', 'B3', 'G3', 'D3', 'A2', 'E2'] },
-            DROP_D: { name: 'Drop D', notes: ['E4', 'B3', 'G3', 'D3', 'A2', 'D2'] },
-            OPEN_D: { name: 'Open D', notes: ['D4', 'A3', 'F#3', 'D3', 'A2', 'D2'] },
-            OPEN_G: { name: 'Open G', notes: ['D4', 'B3', 'G3', 'D3', 'G2', 'D2'] },
-            HALF_STEP: { name: 'Half-Step Down', notes: ['Eb4', 'Bb3', 'Gb3', 'Db3', 'Ab2', 'Eb2'] },
+        <div id="fretboard" class="fretboard">
+          <!-- Strings generated dynamically -->
+        </div>
+      </div>
+    </div>
+  </div>
 
-            // Joni Mitchell Tunings
-            JONI_COYOTE: { name: 'Joni: Open C13 (CGDFCE)', notes: ['E4', 'C4', 'F3', 'D3', 'G2', 'C2'] },
-            JONI_SEAGULL: { name: 'Joni: Open C (CGCGCE)', notes: ['E4', 'C4', 'G3', 'C3', 'G2', 'C2'] },
-            JONI_HEJIRA: { name: 'Joni: Hejira Tuning (BF#C#EF#B)', notes: ['B3', 'F#3', 'E3', 'C#3', 'F#2', 'B1'] },
-            JONI_PASSION: { name: 'Joni: Open D Variant (DAEF#AD)', notes: ['D4', 'A3', 'F#3', 'E3', 'A2', 'D2'] },
-            JONI_FOR_THE_ROSES: { name: 'Joni: Low Open G (GGDGBD)', notes: ['D4', 'B3', 'G3', 'D3', 'G2', 'G1'] },
+  <footer>
+    <a href="#" id="download-app-link">Download App (.html)</a>
+  </footer>
 
-            CUSTOM: { name: 'Custom Tuning', notes: ['D4', 'A3', 'G3', 'D3', 'A2', 'D2'] }
+  <script>
+    // --- Pitch & Music Logic Data ---
+    const NOTE_NAMES = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
+    
+    const PRESETS = {
+      'standard': ["E2", "A2", "D3", "G3", "B3", "E4"],
+      'dadgad': ["D2", "A2", "D3", "G3", "A3", "D4"],
+      'double-drop-d': ["D2", "A2", "D3", "G3", "B3", "D4"],
+      'drop-d': ["D2", "A2", "D3", "G3", "B3", "E4"],
+      'open-d': ["D2", "A2", "D3", "F#3", "A3", "D4"],
+      'open-g': ["D2", "G2", "D3", "G3", "B3", "D4"],
+      'half-step-down': ["D#2", "G#2", "C#3", "F#3", "A#3", "D#4"],
+      'jm-coyote': ["C2", "G2", "D3", "F3", "C4", "E4"],
+      'jm-seagull': ["C2", "G2", "C3", "G3", "C4", "E4"],
+      'jm-hejira': ["B1", "F#2", "C#3", "E3", "F#3", "B3"],
+      'jm-passion': ["D2", "A2", "E3", "F#3", "A3", "D4"],
+      'jm-for-the-roses': ["G1", "G2", "D3", "G3", "B3", "D4"]
+    };
+
+    // State Variables
+    let currentTuning = [...PRESETS['standard']];
+    let mutedStrings = [false, false, false, false, false, false]; // Index 0 = String 6 (Low E)
+    let fingerings = [null, null, null, null, null, null]; // Frets per string (0-12)
+    let capoFret = 0;
+    let capoCoverage = 'all';
+
+    // Parse note name to MIDI number (e.g., "E2" -> 40)
+    function noteToMidi(noteStr) {
+      const regex = /^([A-G][#b]?)(-?\d+)$/i;
+      const match = noteStr.trim().match(regex);
+      if (!match) return 60;
+      let name = match[1].toUpperCase();
+      let octave = parseInt(match[2], 10);
+      
+      // Normalize flats to sharps
+      const flatMap = { 'DB': 'C#', 'EB': 'D#', 'GB': 'F#', 'AB': 'G#', 'BB': 'A#' };
+      if (flatMap[name]) name = flatMap[name];
+
+      let semitone = NOTE_NAMES.indexOf(name);
+      return (octave + 1) * 12 + semitone;
+    }
+
+    function midiToNoteName(midi) {
+      return NOTE_NAMES[midi % 12];
+    }
+
+    function midiToFrequency(midi) {
+      return 440 * Math.pow(2, (midi - 69) / 12);
+    }
+
+    // Determine string gauges for visual styling (String 6 = thickest)
+    const STRING_GAUGES = [3.8, 3.0, 2.2, 1.6, 1.2, 0.8];
+
+    // Audio Context Setup
+    let audioCtx = null;
+    function getAudioContext() {
+      if (!audioCtx) {
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      }
+      return audioCtx;
+    }
+
+    function playNote(midi, delay = 0, duration = 1.5) {
+      const ctx = getAudioContext();
+      if (ctx.state === 'suspended') ctx.resume();
+
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+
+      osc.type = 'triangle';
+      osc.frequency.setValueAtTime(midiToFrequency(midi), ctx.currentTime + delay);
+
+      gain.gain.setValueAtTime(0.001, ctx.currentTime + delay);
+      gain.gain.exponentialRampToValueAtTime(0.3, ctx.currentTime + delay + 0.03);
+      gain.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + delay + duration);
+
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+
+      osc.start(ctx.currentTime + delay);
+      osc.stop(ctx.currentTime + delay + duration);
+    }
+
+    // --- DOM Elements & Rendering ---
+    const fretboardEl = document.getElementById('fretboard');
+    const presetSelect = document.getElementById('tuning-preset');
+    const customPanel = document.getElementById('custom-tuning-panel');
+    const capoFretSelect = document.getElementById('capo-fret');
+    const capoCoverageSelect = document.getElementById('capo-coverage');
+    const chordNameEl = document.getElementById('detected-chord');
+    const chordDetailsEl = document.getElementById('chord-notes');
+
+    function isCapoOnString(stringIdx) {
+      if (capoFret === 0) return false;
+      // stringIdx: 0 = Str 6, 5 = Str 1
+      if (capoCoverage === 'all') return true;
+      if (capoCoverage === 'top-5' && stringIdx >= 1) return true;
+      if (capoCoverage === 'bottom-5' && stringIdx <= 4) return true;
+      if (capoCoverage === 'middle-4' && stringIdx >= 1 && stringIdx <= 4) return true;
+      if (capoCoverage === 'treble-3' && stringIdx >= 3) return true;
+      return false;
+    }
+
+    function getActiveFret(stringIdx) {
+      if (mutedStrings[stringIdx]) return null;
+      if (fingerings[stringIdx] !== null) {
+        return fingerings[stringIdx];
+      }
+      return isCapoOnString(stringIdx) ? capoFret : 0;
+    }
+
+    function getMidiForString(stringIdx) {
+      const fret = getActiveFret(stringIdx);
+      if (fret === null) return null;
+      const openMidi = noteToMidi(currentTuning[stringIdx]);
+      return openMidi + fret;
+    }
+
+    function renderFretboard() {
+      fretboardEl.innerHTML = '';
+
+      // Draw string rows (from String 1 at top to String 6 at bottom)
+      for (let s = 5; s >= 0; s--) {
+        const row = document.createElement('div');
+        row.className = 'string-row';
+
+        // Mute button cell
+        const muteCell = document.createElement('div');
+        muteCell.className = 'string-label-cell';
+        const muteBtn = document.createElement('button');
+        muteBtn.className = `mute-btn ${mutedStrings[s] ? 'muted' : ''}`;
+        muteBtn.textContent = 'X';
+        muteBtn.onclick = (e) => {
+          e.stopPropagation();
+          mutedStrings[s] = !mutedStrings[s];
+          renderFretboard();
+          analyzeChord();
         };
+        muteCell.appendChild(muteBtn);
+        row.appendChild(muteCell);
 
-        const CHORD_DEFINITIONS = [
-            { name: 'Major', suffix: '', intervals: [0, 4, 7] },
-            { name: 'Minor', suffix: 'm', intervals: [0, 3, 7] },
-            { name: 'Power Chord', suffix: '5', intervals: [0, 7] },
-            { name: 'Suspended 4th', suffix: 'sus4', intervals: [0, 5, 7] },
-            { name: 'Suspended 2nd', suffix: 'sus2', intervals: [0, 2, 7] },
-            { name: 'Add 9', suffix: 'add9', intervals: [0, 4, 7, 2] },
-            { name: 'Minor Add 9', suffix: 'madd9', intervals: [0, 3, 7, 2] },
-            { name: 'Dominant 7th', suffix: '7', intervals: [0, 4, 7, 10] },
-            { name: 'Major 7th', suffix: 'maj7', intervals: [0, 4, 7, 11] },
-            { name: 'Minor 7th', suffix: 'm7', intervals: [0, 3, 7, 10] },
-            { name: '7th Sus4', suffix: '7sus4', intervals: [0, 5, 7, 10] },
-            { name: '6th', suffix: '6', intervals: [0, 4, 7, 9] },
-            { name: 'Minor 6th', suffix: 'm6', intervals: [0, 3, 7, 9] },
-            { name: 'Diminished', suffix: 'dim', intervals: [0, 3, 6] },
-            { name: 'Half-Diminished 7th', suffix: 'm7b5', intervals: [0, 3, 6, 10] },
-            { name: 'Augmented', suffix: 'aug', intervals: [0, 4, 8] }
-        ];
+        // Visual string wire
+        const stringLine = document.createElement('div');
+        stringLine.className = 'string-line';
+        stringLine.style.height = `${STRING_GAUGES[s]}px`;
+        stringLine.style.top = `calc(50% - ${STRING_GAUGES[s]/2}px)`;
+        row.appendChild(stringLine);
 
-        class GuitarApp {
-            constructor() {
-                this.currentTuningKey = 'DADGAD';
-                this.currentTuning = [...TUNINGS.DADGAD.notes]; // 1st to 6th string
-                this.fretCount = 15;
-                this.capos = [];
-                this.pressedFrets = [null, null, null, null, null, null];
-                this.mutedStrings = [false, false, false, false, false, false]; // true if string is muted
-                this.transposeOffset = 0;
-                this.audioCtx = null;
-
-                this.init();
+        // Render Frets (0 to 12)
+        const activeFret = getActiveFret(s);
+        for (let f = 0; f <= 12; f++) {
+          const fretCell = document.createElement('div');
+          fretCell.className = `fret-cell ${f === 0 ? 'nut' : ''}`;
+          
+          fretCell.onclick = () => {
+            if (f === 0) {
+              fingerings[s] = null;
+            } else {
+              fingerings[s] = fingerings[s] === f ? null : f;
             }
-
-            init() {
-                this.renderCustomTuningInputs();
-                this.renderFretboard();
-                this.updateAnalysis();
-                lucide.createIcons();
-            }
-
-            // Standalone File Exporter
-            downloadAppFile() {
-                const htmlContent = '<!DOCTYPE html>\n' + document.documentElement.outerHTML;
-                const blob = new Blob([htmlContent], { type: 'text/html' });
-                const url = URL.createObjectURL(blob);
-                const a = document.createElement('a');
-                a.href = url;
-                a.download = 'Fretboard_Capo_Analyzer.html';
-                document.body.appendChild(a);
-                a.click();
-                document.body.removeChild(a);
-                URL.revokeObjectURL(url);
-            }
-
-            // Custom Tuning Inputs Builder
-            renderCustomTuningInputs() {
-                const container = document.getElementById('customStringsInputs');
-                container.innerHTML = '';
-
-                // Strings 6 to 1 (left to right visually, 6th to 1st)
-                for (let sIdx = 5; sIdx >= 0; sIdx--) {
-                    const stringNum = sIdx + 1;
-                    const pitch = this.currentTuning[sIdx];
-                    const match = pitch.match(/^([A-G][#b]?)(-?\d+)$/) || ['D2', 'D', '2'];
-                    const noteStr = match[1];
-                    const octaveStr = match[2];
-
-                    const div = document.createElement('div');
-                    div.className = 'flex flex-col gap-1';
-                    div.innerHTML = `
-                        <span class="text-[9px] text-slate-400">${stringNum}th</span>
-                        <select onchange="app.updateCustomStringNote(${sIdx}, this.value, ${octaveStr})" class="bg-slate-800 text-amberGold text-xs font-bold rounded p-1 border border-slate-700">
-                            ${NOTE_NAMES.map(n => `<option value="${n}" ${n === noteStr ? 'selected' : ''}>${n}</option>`).join('')}
-                        </select>
-                        <select onchange="app.updateCustomStringNote(${sIdx}, '${noteStr}', this.value)" class="bg-slate-800 text-slate-300 text-[10px] rounded p-0.5 border border-slate-700">
-                            ${[1, 2, 3, 4, 5].map(o => `<option value="${o}" ${o == octaveStr ? 'selected' : ''}>Oct ${o}</option>`).join('')}
-                        </select>
-                    `;
-                    container.appendChild(div);
-                }
-            }
-
-            updateCustomStringNote(sIndex, note, octave) {
-                this.currentTuning[sIndex] = `${note}${octave}`;
-                this.currentTuningKey = 'CUSTOM';
-                document.getElementById('presetTuningSelect').value = 'CUSTOM';
-                this.renderFretboard();
-                this.updateAnalysis();
-            }
-
-            // Audio Synthesis
-            initAudio() {
-                if (!this.audioCtx) {
-                    this.audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-                }
-            }
-
-            noteToFrequency(noteNameWithOctave) {
-                const match = noteNameWithOctave.match(/^([A-G][#b]?)(-?\d+)$/);
-                if (!match) return 440;
-                let note = match[1];
-                let octave = parseInt(match[2], 10);
-                const noteIndex = NOTE_NAMES.indexOf(note) !== -1 ? NOTE_NAMES.indexOf(note) : FLAT_NAMES.indexOf(note);
-                const midiNumber = (octave + 1) * 12 + noteIndex;
-                return 440 * Math.pow(2, (midiNumber - 69) / 12);
-            }
-
-            strumCurrentChord() {
-                this.initAudio();
-                const activePitches = this.getActivePitches();
-
-                // Strum from low string (6th) to high string (1st)
-                const reversedPitches = [...activePitches].reverse();
-
-                reversedPitches.forEach((pitch, i) => {
-                    if (!pitch || pitch.isMuted) return; // Skip muted strings
-
-                    const freq = this.noteToFrequency(pitch.noteWithOctave);
-                    const strumDelay = i * 0.045;
-                    const now = this.audioCtx.currentTime + strumDelay;
-
-                    const osc = this.audioCtx.createOscillator();
-                    const gain = this.audioCtx.createGain();
-
-                    osc.type = 'triangle';
-                    osc.frequency.setValueAtTime(freq, now);
-
-                    gain.gain.setValueAtTime(0.001, now);
-                    gain.gain.exponentialRampToValueAtTime(0.22, now + 0.01);
-                    gain.gain.exponentialRampToValueAtTime(0.0001, now + 1.8);
-
-                    osc.connect(gain);
-                    gain.connect(this.audioCtx.destination);
-
-                    osc.start(now);
-                    osc.stop(now + 1.85);
-                });
-            }
-
-            // Render Fretboard
-            renderFretboard() {
-                const fretboardEl = document.getElementById('fretboard');
-                fretboardEl.innerHTML = '';
-
-                const stringCount = 6;
-                const stringSpacing = 100 / (stringCount + 1);
-
-                // Render Frets & Numbers
-                for (let fret = 0; fret <= this.fretCount; fret++) {
-                    const leftPos = (fret / this.fretCount) * 100;
-
-                    const fretWire = document.createElement('div');
-                    fretWire.className = fret === 0 ? 'nut-wire absolute top-0 bottom-0 w-2 z-20' : 'fret-wire absolute top-0 bottom-0 w-1 z-10';
-                    fretWire.style.left = `${leftPos}%`;
-                    fretboardEl.appendChild(fretWire);
-
-                    if ([3, 5, 7, 9, 15].includes(fret)) {
-                        const dot = document.createElement('div');
-                        dot.className = 'absolute w-3 h-3 rounded-full bg-slate-600/50 -translate-x-1/2 top-1/2 -translate-y-1/2 pointer-events-none';
-                        dot.style.left = `${leftPos - (100 / this.fretCount / 2)}%`;
-                        fretboardEl.appendChild(dot);
-                    } else if (fret === 12) {
-                        const dot1 = document.createElement('div');
-                        dot1.className = 'absolute w-2.5 h-2.5 rounded-full bg-slate-500/60 -translate-x-1/2 top-1/3 pointer-events-none';
-                        dot1.style.left = `${leftPos - (100 / this.fretCount / 2)}%`;
-                        const dot2 = document.createElement('div');
-                        dot2.className = 'absolute w-2.5 h-2.5 rounded-full bg-slate-500/60 -translate-x-1/2 top-2/3 pointer-events-none';
-                        dot2.style.left = `${leftPos - (100 / this.fretCount / 2)}%`;
-                        fretboardEl.appendChild(dot1);
-                        fretboardEl.appendChild(dot2);
-                    }
-
-                    if (fret > 0) {
-                        const label = document.createElement('div');
-                        label.className = 'absolute text-[10px] font-bold text-slate-500 -translate-x-1/2 bottom-1 pointer-events-none';
-                        label.style.left = `${leftPos - (100 / this.fretCount / 2)}%`;
-                        label.innerText = fret;
-                        fretboardEl.appendChild(label);
-                    }
-                }
-
-                // Render Strings & Nut Toggle Buttons
-                for (let s = 0; s < stringCount; s++) {
-                    const topPos = (s + 1) * stringSpacing;
-
-                    // Guitar String Line
-                    const stringEl = document.createElement('div');
-                    stringEl.className = `guitar-string string-${6 - s}`;
-                    stringEl.style.top = `${topPos}%`;
-                    if (this.mutedStrings[s]) {
-                        stringEl.style.opacity = '0.25';
-                    }
-                    fretboardEl.appendChild(stringEl);
-
-                    // Nut Interactive Button (Mute/Open Toggle)
-                    const nutToggle = document.createElement('div');
-                    const isMuted = this.mutedStrings[s];
-                    nutToggle.className = `absolute z-40 w-6 h-6 rounded-full flex items-center justify-center font-extrabold text-xs cursor-pointer -translate-y-1/2 border transition shadow-md ${
-                        isMuted ? 'bg-roseAccent text-white border-rose-400' : 'bg-slate-800 text-amberGold border-slate-600 hover:border-amberGold'
-                    }`;
-                    nutToggle.style.left = '0.3%';
-                    nutToggle.style.top = `${topPos}%`;
-                    nutToggle.innerText = isMuted ? 'X' : 'O';
-                    nutToggle.title = isMuted ? 'String Muted (Click to Unmute)' : 'Click to Mute String';
-                    nutToggle.onclick = () => this.toggleMute(s);
-                    fretboardEl.appendChild(nutToggle);
-
-                    // Interactive Fret Click Targets
-                    for (let fret = 1; fret <= this.fretCount; fret++) {
-                        const fretWidth = 100 / this.fretCount;
-                        const leftPos = (fret - 0.5) * fretWidth;
-
-                        const clickableArea = document.createElement('div');
-                        clickableArea.className = 'absolute z-30 cursor-pointer flex items-center justify-center -translate-y-1/2 -translate-x-1/2 hover:bg-amberGold/10 rounded-full transition';
-                        clickableArea.style.top = `${topPos}%`;
-                        clickableArea.style.left = `${leftPos}%`;
-                        clickableArea.style.width = `${fretWidth * 0.8}%`;
-                        clickableArea.style.height = `${stringSpacing * 0.8}%`;
-
-                        clickableArea.onclick = () => this.toggleFinger(s, fret);
-                        fretboardEl.appendChild(clickableArea);
-                    }
-                }
-
-                this.renderCaposOverlay(fretboardEl, stringSpacing);
-                this.renderFingerMarkers(fretboardEl, stringSpacing);
-            }
-
-            renderCaposOverlay(fretboardEl, stringSpacing) {
-                this.capos.forEach(capo => {
-                    const fretWidth = 100 / this.fretCount;
-                    const leftPos = (capo.fret - 0.5) * fretWidth;
-
-                    const minString = Math.min(...capo.stringsCovered);
-                    const maxString = Math.max(...capo.stringsCovered);
-
-                    const topPos = minString * stringSpacing;
-                    const height = (maxString - minString + 0.8) * stringSpacing;
-
-                    const capoBar = document.createElement('div');
-                    capoBar.className = 'capo-bar absolute -translate-x-1/2 -translate-y-1/2 flex items-center justify-center text-[10px] font-black text-slate-950 shadow-lg';
-                    capoBar.style.left = `${leftPos}%`;
-                    capoBar.style.top = `${topPos + (height/2) - (stringSpacing*0.4)}%`;
-                    capoBar.style.width = `14px`;
-                    capoBar.style.height = `${height}%`;
-                    capoBar.innerText = 'C';
-
-                    fretboardEl.appendChild(capoBar);
-                });
-            }
-
-            renderFingerMarkers(fretboardEl, stringSpacing) {
-                const activePitches = this.getActivePitches();
-
-                activePitches.forEach((pitch, sIndex) => {
-                    if (!pitch || pitch.isMuted) return; // Hide note marker if string is muted
-
-                    const fret = pitch.effectiveFret;
-                    if (fret === 0 && !pitch.isCapoActive) return; // Nut state handled by toggle button
-
-                    const topPos = (sIndex + 1) * stringSpacing;
-                    const fretWidth = 100 / this.fretCount;
-                    const leftPos = (fret - 0.5) * fretWidth;
-
-                    const isPressed = this.pressedFrets[sIndex] !== null;
-                    const isCapoOpen = pitch.isCapoActive && !isPressed;
-
-                    let bgColor = 'bg-amberGold text-slate-950 border-amber-300';
-                    if (isCapoOpen) {
-                        bgColor = 'bg-cyanAccent text-slate-950 border-cyan-200';
-                    }
-
-                    const marker = document.createElement('div');
-                    marker.className = `note-marker absolute rounded-full border-2 font-black text-xs flex items-center justify-center shadow-lg -translate-x-1/2 -translate-y-1/2 cursor-pointer ${bgColor}`;
-                    marker.style.top = `${topPos}%`;
-                    marker.style.left = `${leftPos}%`;
-                    marker.style.width = '24px';
-                    marker.style.height = '24px';
-                    marker.innerText = pitch.noteName;
-
-                    marker.onclick = (e) => {
-                        e.stopPropagation();
-                        this.toggleFinger(sIndex, fret);
-                    };
-
-                    fretboardEl.appendChild(marker);
-                });
-            }
-
-            // Logic Controls
-            toggleMute(stringIndex) {
-                this.mutedStrings[stringIndex] = !this.mutedStrings[stringIndex];
-                this.renderFretboard();
-                this.updateAnalysis();
-            }
-
-            unmuteAll() {
-                this.mutedStrings = [false, false, false, false, false, false];
-                this.renderFretboard();
-                this.updateAnalysis();
-            }
-
-            toggleFinger(stringIndex, fret) {
-                if (this.pressedFrets[stringIndex] === fret) {
-                    this.pressedFrets[stringIndex] = null;
-                } else {
-                    this.pressedFrets[stringIndex] = fret;
-                    this.mutedStrings[stringIndex] = false; // Unmute automatically when fretted
-                }
-                this.renderFretboard();
-                this.updateAnalysis();
-            }
-
-            clearFingers() {
-                this.pressedFrets = [null, null, null, null, null, null];
-                this.renderFretboard();
-                this.updateAnalysis();
-            }
-
-            getActivePitches() {
-                return this.currentTuning.map((openNoteWithOctave, stringIndex) => {
-                    const stringNum = stringIndex + 1;
-                    const isMuted = this.mutedStrings[stringIndex];
-
-                    if (isMuted) {
-                        return { stringIndex, stringNum, isMuted: true };
-                    }
-
-                    let maxCapoFret = 0;
-                    this.capos.forEach(c => {
-                        if (c.stringsCovered.includes(stringNum) && c.fret > maxCapoFret) {
-                            maxCapoFret = c.fret;
-                        }
-                    });
-
-                    const pressedFret = this.pressedFrets[stringIndex];
-                    let effectiveFret = 0;
-                    let isCapoActive = false;
-
-                    if (pressedFret !== null) {
-                        effectiveFret = pressedFret;
-                    } else if (maxCapoFret > 0) {
-                        effectiveFret = maxCapoFret;
-                        isCapoActive = true;
-                    }
-
-                    const noteInfo = this.addSemitonesToNote(openNoteWithOctave, effectiveFret + this.transposeOffset);
-
-                    return {
-                        stringIndex,
-                        stringNum,
-                        isMuted: false,
-                        effectiveFret,
-                        isCapoActive,
-                        noteName: noteInfo.noteName,
-                        octave: noteInfo.octave,
-                        noteWithOctave: `${noteInfo.noteName}${noteInfo.octave}`
-                    };
-                });
-            }
-
-            addSemitonesToNote(startNoteWithOctave, semitones) {
-                const match = startNoteWithOctave.match(/^([A-G][#b]?)(-?\d+)$/);
-                if (!match) return { noteName: 'C', octave: 4 };
-
-                let note = match[1];
-                let octave = parseInt(match[2], 10);
-
-                let noteIdx = NOTE_NAMES.indexOf(note);
-                if (noteIdx === -1) noteIdx = FLAT_NAMES.indexOf(note);
-
-                let totalSemitones = noteIdx + semitones;
-                let newNoteIdx = ((totalSemitones % 12) + 12) % 12;
-                let octaveChange = Math.floor(totalSemitones / 12);
-
-                return {
-                    noteName: NOTE_NAMES[newNoteIdx],
-                    octave: octave + octaveChange
-                };
-            }
-
-            // Chord Recognition
-            updateAnalysis() {
-                const activePitches = this.getActivePitches();
-                const soundPitches = activePitches.filter(p => !p.isMuted);
-                const uniqueNoteNames = [...new Set(soundPitches.map(p => p.noteName))];
-
-                // Render String Breakdown
-                const activeNotesGrid = document.getElementById('activeNotesGrid');
-                activeNotesGrid.innerHTML = activePitches.map((p, idx) => `
-                    <div class="bg-slate-900 border ${p.isMuted ? 'border-rose-900/50 bg-rose-950/10' : 'border-slate-800'} rounded-lg p-2 flex flex-col items-center">
-                        <span class="text-[10px] text-slate-500 font-bold">${idx + 1}st Str</span>
-                        <span class="text-base font-extrabold ${p.isMuted ? 'text-rose-400' : 'text-amberGold'}">${p.isMuted ? 'MUTED' : p.noteName}</span>
-                        <span class="text-[10px] text-slate-400">${p.isMuted ? 'X' : 'Fret ' + p.effectiveFret}</span>
-                    </div>
-                `).join('');
-
-                document.getElementById('activeStringsCountText').innerText = `${soundPitches.length} / 6`;
-
-                // Detect Chords
-                const chordResults = this.identifyChord(uniqueNoteNames, soundPitches);
-
-                const chordNameDisplay = document.getElementById('chordNameDisplay');
-                const chordFormulaDisplay = document.getElementById('formulaText');
-                const altChordsList = document.getElementById('altChordsList');
-
-                if (chordResults.length > 0) {
-                    const primary = chordResults[0];
-                    chordNameDisplay.innerText = primary.fullName;
-                    chordFormulaDisplay.innerText = primary.intervals.join(' - ');
-
-                    if (chordResults.length > 1) {
-                        altChordsList.innerHTML = chordResults.slice(1, 4).map(c => `
-                            <span class="px-2 py-1 bg-slate-800 border border-slate-700 rounded text-amberGold font-semibold">${c.fullName}</span>
-                        `).join('');
-                    } else {
-                        altChordsList.innerHTML = '<span class="italic text-slate-500">None detected</span>';
-                    }
-                } else if (soundPitches.length === 0) {
-                    chordNameDisplay.innerText = 'All Muted';
-                    chordFormulaDisplay.innerText = 'No sounding strings';
-                    altChordsList.innerHTML = '<span class="italic text-slate-500">All strings muted</span>';
-                } else {
-                    chordNameDisplay.innerText = uniqueNoteNames.join(' ');
-                    chordFormulaDisplay.innerText = 'Custom Pitch Collection';
-                    altChordsList.innerHTML = '<span class="italic text-slate-500">Unrecognized combination</span>';
-                }
-
-                this.updateStandardTuningEquivalent(activePitches, chordResults[0]);
-            }
-
-            identifyChord(uniqueNotes, soundPitches) {
-                if (uniqueNotes.length === 0) return [];
-
-                const results = [];
-                // Lowest active pitch is bass note
-                const bassPitch = [...soundPitches].reverse().find(p => !p.isMuted);
-                const bassNote = bassPitch ? bassPitch.noteName : null;
-
-                uniqueNotes.forEach(root => {
-                    const rootIdx = NOTE_NAMES.indexOf(root);
-
-                    const semitoneIntervals = uniqueNotes.map(n => {
-                        const nIdx = NOTE_NAMES.indexOf(n);
-                        return ((nIdx - rootIdx) % 12 + 12) % 12;
-                    }).sort((a, b) => a - b);
-
-                    CHORD_DEFINITIONS.forEach(def => {
-                        const isMatch = def.intervals.every(inv => semitoneIntervals.includes(inv));
-                        
-                        if (isMatch) {
-                            let fullName = `${root}${def.suffix}`;
-                            if (bassNote && bassNote !== root) {
-                                fullName += `/${bassNote}`;
-                            }
-
-                            results.push({
-                                root,
-                                fullName,
-                                formulaName: def.name,
-                                intervals: def.intervals.map(i => this.intervalToName(i))
-                            });
-                        }
-                    });
-                });
-
-                return results;
-            }
-
-            intervalToName(semitones) {
-                const names = ['R', 'b2', '2/9', 'm3', 'M3', 'P4/11', 'b5', 'P5', 'b6', '6/13', 'b7', '7'];
-                return names[semitones] || `${semitones}st`;
-            }
-
-            updateStandardTuningEquivalent(activePitches, primaryChord) {
-                const stdTitle = document.getElementById('stdChordTitle');
-                const stdTab = document.getElementById('stdVoicingTab');
-                const stdFingerDetails = document.getElementById('stdFingerDetails');
-
-                if (primaryChord) {
-                    stdTitle.innerText = primaryChord.fullName;
-                } else {
-                    stdTitle.innerText = 'Custom Voicing';
-                }
-
-                const pitchString = activePitches.map(p => p.isMuted ? 'X' : p.noteName).reverse().join(' ');
-                stdFingerDetails.innerText = `Pitches (6th to 1st): ${pitchString}`;
-                stdTab.innerText = activePitches.map(p => p.isMuted ? 'x' : p.effectiveFret).reverse().join('-');
-            }
-
-            // Capo Modal Controls
-            openCapoModal() {
-                document.getElementById('capoModal').classList.remove('hidden');
-                document.getElementById('capoModal').classList.add('flex');
-            }
-
-            closeCapoModal() {
-                document.getElementById('capoModal').classList.add('hidden');
-                document.getElementById('capoModal').classList.remove('flex');
-            }
-
-            toggleCapoModalCustomStrings() {
-                const type = document.getElementById('capoTypeSelect').value;
-                const group = document.getElementById('customCapoStringsGroup');
-                if (type === 'CUSTOM') {
-                    group.classList.remove('hidden');
-                } else {
-                    group.classList.add('hidden');
-                }
-            }
-
-            addCapoFromModal() {
-                const type = document.getElementById('capoTypeSelect').value;
-                const fret = parseInt(document.getElementById('capoFretInput').value, 10) || 1;
-
-                let stringsCovered = [1, 2, 3, 4, 5, 6];
-
-                if (type === 'PARTIAL_ESUS') {
-                    stringsCovered = [3, 4, 5];
-                } else if (type === 'PARTIAL_DROP_D') {
-                    stringsCovered = [1, 2, 3, 4, 5];
-                } else if (type === 'CUSTOM') {
-                    const checked = document.querySelectorAll('.capo-string-check:checked');
-                    stringsCovered = Array.from(checked).map(c => parseInt(c.value, 10));
-                }
-
-                this.capos.push({
-                    id: Date.now(),
-                    fret,
-                    stringsCovered
-                });
-
-                this.closeCapoModal();
-                this.renderCapoListUI();
-                this.renderFretboard();
-                this.updateAnalysis();
-            }
-
-            removeCapo(capoId) {
-                this.capos = this.capos.filter(c => c.id !== capoId);
-                this.renderCapoListUI();
-                this.renderFretboard();
-                this.updateAnalysis();
-            }
-
-            renderCapoListUI() {
-                const list = document.getElementById('capoList');
-                if (this.capos.length === 0) {
-                    list.innerHTML = '<span class="text-xs text-slate-500 italic">No capos attached</span>';
-                    return;
-                }
-
-                list.innerHTML = this.capos.map(c => `
-                    <div class="flex items-center justify-between bg-slate-900 border border-slate-800 rounded-lg p-2 text-xs">
-                        <div>
-                            <span class="font-bold text-cyanAccent">Fret ${c.fret} Capo</span>
-                            <span class="text-[10px] text-slate-400 block">Strings: ${c.stringsCovered.join(', ')}</span>
-                        </div>
-                        <button onclick="app.removeCapo(${c.id})" class="text-rose-400 hover:text-rose-300 p-1">
-                            <i data-lucide="trash-2" class="w-4 h-4"></i>
-                        </button>
-                    </div>
-                `).join('');
-
-                lucide.createIcons();
-            }
-
-            changePresetTuning(presetKey) {
-                const customEditor = document.getElementById('customTuningEditor');
-
-                if (presetKey === 'CUSTOM') {
-                    customEditor.classList.remove('hidden');
-                } else {
-                    customEditor.classList.add('hidden');
-                    if (TUNINGS[presetKey]) {
-                        this.currentTuningKey = presetKey;
-                        this.currentTuning = [...TUNINGS[presetKey].notes];
-                        this.renderCustomTuningInputs();
-                        this.renderFretboard();
-                        this.updateAnalysis();
-                    }
-                }
-            }
-
-            setFretCount(count) {
-                this.fretCount = count;
-                this.renderFretboard();
-            }
-
-            transposeChord(semitones) {
-                this.transposeOffset += semitones;
-                document.getElementById('transposeAmountDisplay').innerText = `${this.transposeOffset >= 0 ? '+' : ''}${this.transposeOffset} ST`;
-                
-                const activePitches = this.getActivePitches();
-                const soundPitches = activePitches.filter(p => !p.isMuted);
-                const uniqueNotes = [...new Set(soundPitches.map(p => p.noteName))];
-                const transposedChords = this.identifyChord(uniqueNotes, soundPitches);
-
-                const transposedDisplay = document.getElementById('transposedChordName');
-                if (transposedChords.length > 0) {
-                    transposedDisplay.innerText = transposedChords[0].fullName;
-                } else {
-                    transposedDisplay.innerText = uniqueNotes.join(' ');
-                }
-
-                this.renderFretboard();
-                this.updateAnalysis();
-            }
-
-            resetTranspose() {
-                this.transposeOffset = 0;
-                document.getElementById('transposeAmountDisplay').innerText = '0 ST';
-                this.renderFretboard();
-                this.updateAnalysis();
-            }
+            mutedStrings[s] = false;
+            renderFretboard();
+            analyzeChord();
+            
+            const midi = getMidiForString(s);
+            if (midi !== null) playNote(midi);
+          };
+
+          // Render Note Marker if active
+          if (!mutedStrings[s] && activeFret === f) {
+            const marker = document.createElement('div');
+            let isCapo = (f > 0 && f === capoFret && isCapoOnString(s) && fingerings[s] === null);
+            let isOpen = (f === 0);
+
+            marker.className = `note-marker ${isCapo ? 'capo-note' : (isOpen ? 'open-note' : '')}`;
+            
+            const midi = noteToMidi(currentTuning[s]) + f;
+            marker.textContent = midiToNoteName(midi);
+            fretCell.appendChild(marker);
+          }
+
+          row.appendChild(fretCell);
         }
 
-        let app;
-        window.addEventListener('DOMContentLoaded', () => {
-            app = new GuitarApp();
-        });
-    </script>
+        fretboardEl.appendChild(row);
+      }
 
-</body></html>
+      // Add fret dots overlay
+      const dotsOverlay = document.createElement('div');
+      dotsOverlay.className = 'fret-marker-dots';
+      dotsOverlay.appendChild(document.createElement('div')); // Empty for mute column
+      dotsOverlay.appendChild(document.createElement('div')); // Open string column
+
+      for (let f = 1; f <= 12; f++) {
+        const dotCell = document.createElement('div');
+        dotCell.className = 'dot-cell';
+        if ([3, 5, 7, 9, 12].includes(f)) {
+          const dot = document.createElement('div');
+          dot.className = 'dot';
+          dotCell.appendChild(dot);
+        }
+        dotsOverlay.appendChild(dotCell);
+      }
+      fretboardEl.appendChild(dotsOverlay);
+    }
+
+    // --- Basic Reverse Chord Analysis Engine ---
+    function analyzeChord() {
+      const activeMidis = [];
+      const notes = [];
+
+      for (let s = 0; s < 6; s++) {
+        const midi = getMidiForString(s);
+        if (midi !== null) {
+          activeMidis.push(midi);
+          notes.push(midiToNoteName(midi));
+        }
+      }
+
+      if (activeMidis.length === 0) {
+        chordNameEl.textContent = "All Muted";
+        chordDetailsEl.textContent = "Unmute or click frets to play notes";
+        return;
+      }
+
+      // Unique pitch classes
+      const pitchClasses = [...new Set(activeMidis.map(m => m % 12))].sort((a,b) => a - b);
+      const bassNote = midiToNoteName(activeMidis[0]);
+
+      if (pitchClasses.length === 1) {
+        chordNameEl.textContent = `${bassNote} Single Pitch`;
+        chordDetailsEl.textContent = `Notes: ${notes.join(' - ')}`;
+        return;
+      }
+
+      // Basic chord pattern identification relative to root
+      let bestMatch = null;
+
+      for (let rootPC of pitchClasses) {
+        const rootName = NOTE_NAMES[rootPC];
+        const intervals = pitchClasses.map(pc => (pc - rootPC + 12) % 12).sort((a,b) => a - b);
+        const intKey = intervals.join(',');
+
+        if (intKey === '0,4,7') bestMatch = `${rootName}`;
+        else if (intKey === '0,3,7') bestMatch = `${rootName}m`;
+        else if (intKey === '0,4,7,10') bestMatch = `${rootName}7`;
+        else if (intKey === '0,4,7,11') bestMatch = `${rootName}maj7`;
+        else if (intKey === '0,3,7,10') bestMatch = `${rootName}m7`;
+        else if (intKey === '0,2,7') bestMatch = `${rootName}sus2`;
+        else if (intKey === '0,5,7') bestMatch = `${rootName}sus4`;
+        else if (intKey === '0,4,7,9') bestMatch = `${rootName}6`;
+        else if (intKey === '0,3,7,9') bestMatch = `${rootName}m6`;
+        else if (intKey === '0,3,6') bestMatch = `${rootName}dim`;
+        else if (intKey === '0,4,8') bestMatch = `${rootName}aug`;
+      }
+
+      if (bestMatch) {
+        if (!bestMatch.startsWith(bassNote) && !bestMatch.includes('/')) {
+          bestMatch += `/${bassNote}`;
+        }
+        chordNameEl.textContent = bestMatch;
+      } else {
+        chordNameEl.textContent = `${bassNote} Custom Shape`;
+      }
+
+      chordDetailsEl.textContent = `Pitches: ${[...new Set(notes)].join(', ')}`;
+    }
+
+    // --- Event Listeners ---
+    presetSelect.addEventListener('change', (e) => {
+      const val = e.target.value;
+      if (val === 'custom') {
+        customPanel.style.display = 'flex';
+      } else {
+        customPanel.style.display = 'none';
+        currentTuning = [...PRESETS[val]];
+        renderFretboard();
+        analyzeChord();
+      }
+    });
+
+    document.getElementById('apply-custom-btn').addEventListener('click', () => {
+      currentTuning = [
+        document.getElementById('str-6').value,
+        document.getElementById('str-5').value,
+        document.getElementById('str-4').value,
+        document.getElementById('str-3').value,
+        document.getElementById('str-2').value,
+        document.getElementById('str-1').value
+      ];
+      renderFretboard();
+      analyzeChord();
+    });
+
+    capoFretSelect.addEventListener('change', (e) => {
+      capoFret = parseInt(e.target.value, 10);
+      renderFretboard();
+      analyzeChord();
+    });
+
+    capoCoverageSelect.addEventListener('change', (e) => {
+      capoCoverage = e.target.value;
+      renderFretboard();
+      analyzeChord();
+    });
+
+    document.getElementById('strum-btn').addEventListener('click', () => {
+      let delay = 0;
+      for (let s = 0; s < 6; s++) {
+        const midi = getMidiForString(s);
+        if (midi !== null) {
+          playNote(midi, delay);
+          delay += 0.06;
+        }
+      }
+    });
+
+    document.getElementById('reset-btn').addEventListener('click', () => {
+      fingerings = [null, null, null, null, null, null];
+      mutedStrings = [false, false, false, false, false, false];
+      renderFretboard();
+      analyzeChord();
+    });
+
+    document.getElementById('download-app-link').addEventListener('click', (e) => {
+      e.preventDefault();
+      const htmlContent = "<!DOCTYPE html>\n" + document.documentElement.outerHTML;
+      const blob = new Blob([htmlContent], { type: 'text/html' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'fretboard-capo-analyzer.html';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    });
+
+    // Initial Setup
+    renderFretboard();
+    analyzeChord();
+  </script>
+</body>
+</html>
